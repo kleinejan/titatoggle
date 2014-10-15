@@ -1,0 +1,32 @@
+{
+  "name": "titatoggle",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kleinejan/titatoggle",
+  "authors": [
+    "Jan Enning <enning@kleinejan.org>"
+  ],
+  "description": "Bootstrap checkbox toggle",
+  "main": "index.html",
+  "moduleType": [
+    "yui"
+  ],
+  "keywords": [
+    "css",
+    "less",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  },
+  "devDependencies": {
+    "lesshat": "~3.0.2"
+  }
+}
