@@ -1,6 +1,8 @@
 @green:@brand-success;
 @white:#FFF;
-@slider-width-default:35px;
+
+@scrubber-size-default:20px;
+@scrubberBG-size-default:@scrubber-size-default * 1.5;
 
 @slider-background-checked:@green;
 @slider-background-unchecked:@white;
@@ -112,8 +114,8 @@
 			}
 			// Off State
 			&:after {
-				width:20px;
-				height:20px;
+				width:@default-scrubber-size;
+				height:@default-scrubber-size;
 				position:absolute;
 				left:0px;
 				top:0;
