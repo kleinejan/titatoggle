@@ -1,1023 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>PhotoGula</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!-- CSS -->
-  <link href="css/kak.css" rel="stylesheet">
-
-
-  <!-- Fav and touch icons -->
-  <link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<meta charset="utf-8">
+	<title>TiTaToggle - default bootstrap awesomeness toggle</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Jan Enning">
+	<link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- <a id="debugBtn" class="btn  btn-xs btn-info pull-right">open</a> -->
-  <div id="debug" class="">
-
-    <br><br>
-    <a class="btn btn-block btn-xs btn-info"href="http://localhost:8084/json/dummy/blanc"> Insert BLANK</a>
-    <a class="btn btn-block btn-xs btn-info"href="http://localhost:8084/json/dummy/data"> Insert Dummy</a>
-    <a class="btn btn-block btn-xs btn-info"href="http://localhost:8084/json/config/reload"> Reload Camera</a>
-    <a class="btn btn-block btn-xs btn-warning"href="http://localhost:8084/json/config/delete"> Delete Gphoto config</a>
-    <a class="btn btn-block btn-xs btn-info"href="http://localhost:8084/json/config/reload"> Insert Gphoto config</a>
-    <a class="btn btn-block btn-xs btn-info" data-bind="click:loggingMessagesData.deleteLog">Delete Log</a>
-    <a class="btn btn-block btn-xs btn-info"href="http://localhost:8084/json/get/logging">View Log</a>
-
-  </div>
-  <div id="wrap">
-
-    <!-- Fixed navbar -->
-    <!--  -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="home.html">Photo<strong>Gula</strong></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a id="debugBtn" href="#">Debug panel</a></li>
-            <li><a href="buyCredit.html"><i class=""></i> Buy</a></li>
-            <li><a href="cameraList.html"><i class="fa fa-list"></i> Camera list</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i> Harry Broekman  <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="account.html"><i class="fa fa-user"></i> Account</a></li>
-                <li><a href="#"><i class="fa fa-money"></i> Payment</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-lock"></i> Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <!-- /Fixed navbar -->
-
-    <!-- Begin page content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10">
-          <h2><i class="fa fa-camera fa fa-1x "></i> <span data-bind="text:gula.camName"></span> <small data-bind="text:gula.slaveName" ></small></h2>
-        </div>
-
-        <div class="col-sm-2 col-xs-12">
-          <p>
-            <button class="btn-block btn btn-lg btn-success" type="button" data-bind="click:gulaAction.dump" id="loading-example-btn" data-loading-text="Saving data...">Save</button>
-          </p>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-
-          <div class="panel">
-            <!-- <ul class="nav nav-blocks nav-justified" id="myTab">
-              <li><a href="#dashboard"><i class="fa fa-dashboard fa fa-2x"></i> Dashboard</a></li>
-              <li><a href="#capture"><i class="fa fa-camera fa fa-2x"></i> <span class="hidden-xs">Capture</span></a></li>
-              <li><a href="#calendar"><i class="fa fa-calendar fa fa-2x"></i> Calendar</a></li>
-              <li><a href="#preview"><i class="fa fa-eye fa fa-2x"></i> Preview</a></li>
-              <li><a href="#upload"><i class="fa fa-cloud fa fa-2x"></i> Upload</a></li>
-              <li class="active"><a data-toggle="tab" id="testClick" href="#system"><i class="fa fa-tasks fa fa-2x"></i> System</a></li>
-
-            </ul> -->
-                <ul class="nav-jan" id="myTab">
-                  <li><a data-toggle="tab" href="#dashboard"><i class="fa fa-dashboard fa fa-2x"></i> <span>Dashboard</span></a></li>
-                  <li><a data-toggle="tab" href="#capture"><i class="fa fa-camera fa fa-2x"></i> <span>Capture</span></a></li>
-                  <li><a data-toggle="tab" href="#calendar"><i class="fa fa-calendar fa fa-2x"></i> <span>Calendar</span></a></li>
-                  <li><a data-toggle="tab" href="#preview"><i class="fa fa-eye fa fa-2x"></i> <span>Preview</span></a></li>
-                  <li><a data-toggle="tab" href="#upload"><i class="fa fa-cloud fa fa-2x"></i> <span>Upload</span></a></li>
-                  <li><a data-toggle="tab" href="#system"><i class="fa fa-tasks fa fa-2x"></i> <span>System</span></a></li>
-
-                </ul>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="tab-content">
-        <!-- dashboard -->
-        <div class="tab-pane animated fadeIn" id="dashboard">
-          <div class="row">
-            <div class="col-md-4">
-
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <!-- <h4><i data-bind="css: { 'fa-eye': gula.capture, 'fa-eye-slash':!gula.capture() }" class="fa"></i> Enable capture</h4> -->
-                    <div class="checkbox checkbox-slider--b checkbox-slider--lg">
-                        <label>
-                            <input type="checkbox" data-bind="attr:{value:gula.capture},checked: gula.capture"><span><h4><!-- <i data-bind="css: { 'fa-eye': gula.capture, 'fa-eye-slash':!gula.capture() }" class="fa"></i>--> Enable capture</h4></span>
-                        </label>
-                    </div>
-                </div>
-              </div>
-
-              <div class="alert alert-danger">
-                <i class=" fa fa-exclamation-triangle fa-fw faa-flash animated"></i> <strong>Camera</strong> not found.
-                <p>Check out the FAQ to fix this issue</p>
-              </div>
-
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <h4>Mini Gula info</h4>
-
-                  <ul class="list-unstyled">
-                    <li class="text-danger" data-bind="visible: !gula.capture()"><i class="fa fa-refresh fa-fw faa-spin"></i> Interval not running</li>
-                    <li class="text-success" data-bind="visible: gula.capture()"><i class="fa fa-refresh fa-fw faa-spin animated"></i> Interval running </li>
-                    <!-- <li class="text-success"><i data-bind="css: { 'animated': gphoto.capture, 'fa-exclamation':!gphoto.capture() }" class="fa fa-refresh fa-fw faa-spin"></i> Interval running</li> -->
-                    <li data-bind="if:gula.uploadEnabled()" class="text-success"><i class="fa fa-check fa-fw"></i> Image upload</li>
-
-                  </ul>
-                  <hr>
-                  <h5>Recent Log</h5>
-
-                  <table class="table table-condensed">
-                    <thead>
-                      <tr>
-                        <th>Date</th>
-                        <th>Request</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody data-bind="foreach:loggingMessagesData.messages">
-                      <tr data-bind="css:key.level">
-                        <td><small data-bind="text:key.date"></small></td>
-                        <td><small data-bind="text:key.msg"></small></td>
-                        <td>
-                          <!-- ko if:key.level()=='error' -->
-                            <i data-bind="css:key.level" class="fa fa-fw fa-exclamation-triangle"></i>
-                          <!-- /ko -->
-                          <!-- ko if:key.level()=='warning' -->
-                            <i data-bind="css:key.level" class="fa fa-fw fa-exclamation"></i>
-                          <!-- /ko -->
-                          <!-- ko if:key.level()=='success' -->
-                            <i data-bind="css:key.level" class="fa fa-fw fa-check"></i>
-                          <!-- /ko -->
-                          <!-- ko if:key.level()=='info' -->
-                            <i data-bind="css:key.level" class="fa fa-fw fa-check"></i>
-                          <!-- /ko -->
-                          <!-- ko if:key.level()=='debug' -->
-                            <i data-bind="css:key.level" class="fa fa-fw fa-exclamation-triangle"></i>
-                          <!-- /ko -->
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <a href="#" class="btn btn-xs btn-success"><i class="fa fa-search"></i> View complete log</a>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-4">
-
-              <h4>Last pictures</h4>
-              <div class="row" data-bind="foreach:fileModel.captureFilesLimited">
-
-                <div class="col-sm-12 col-md-6">
-                  <div class="thumbnail">
-                    <img data-bind="attr:{src:urlPath}">
-                    <div class="caption">
-                      <i class="fa fa-clock-o"></i><small data-bind="text: time"></small>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <a href="#preview"><i class="fa fa-th"></i> view all</a>
-
-            </div>
-            <div class="col-md-4">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <h4>Active settings:</h4>
-                  <h5>Day</h5>
-                  <dl class="" data-bind="foreach: gula.configDay.configList()">
-                    <dt data-bind="text: label"></dt>
-                    <dd><span data-bind="text: current"></span></dd>
-                  </dl>
-                  <hr>
-                  <h4>Twilight</h4>
-                  <span data-bind="foreach: twilight.twilightData().depression">
-                    <ul class="list-unstyled" data-bind="visible: $parent.twilight.twilightToggle(name,$root.gula.twilight()) ">
-                      <li><i class="fa fa-sun-o fa-fw"></i><span data-bind="text: dawn.human"></span> h</li>
-                      <li><i class="fa fa-moon-o fa-fw"></i><span data-bind="text: dusk.human"></span> h</li>
-                    </ul>
-                  </span>
-
-                  <dl class="">
-                    <dt>TimeZone</dt>
-                    <dd><span data-bind="text: twilight.twilightData().timezone"></span></dd>
-                  </dl>
-                </div>
-              </div>
-
-              <div class="panel">
-                <div class="panel-body">
-                  <h4><i class="fa fa-hdd fa fa-1x "> </i> Capture disk</h4>
-                  <div id="chart_div"></div>
-                  <dl class="dl-horizontal">
-                    <dt>Total files</dt>
-                    <dd>{fileCount}</dd>
-                    <dt>Used disk space</dt>
-                    <dd>{diskUsed}</dd>
-                    <dt>Disk size</dt>
-                    <dd>{diskAvialable}</dd>
-                  </dl>
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-        </div>
-
-        <!-- end dashboard -->
-        <!-- capture -->
-        <div class="tab-pane animated fadeIn" id="capture">
-
-          <div class="row">
-            <div class="col-md-8">
-              <div class="row">
-                <div class="col-md-6">
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-
-                      <h4 class="panel-title"><img src="img/Sun-gula.svg" height="100px" alt="Sun">Day<small data-bind="text: gphoto.dawn"></small></h4>
-                    </div>
-                    <div class="panel-body">
-
-                      <div class="form-group">
-                        <label for="intervalDay"><i class="fa fa-clock-o"></i> Interval</label>
-
-                        <select id="intervalDay" class="form-control" data-bind="foreach: gula.timerTemplate, value: gula.intervalDay">
-                            <optgroup data-bind="attr: { label: label }, foreach: values">
-                              <option data-bind="text:$data.label,value:$data.value"></option>
-                            </optgroup>
-                        </select>
-
-                      </div>
-                      <h4 class="text-center muted"><i class="fa fa-cog"></i> Current settings</h4>
-                      <div data-bind="if: !gula.noConfig(gula.activeConfig)">No config items selected</div>
-                      <div class="" data-bind="foreach: $root.gula.configDay.configList">
-                            <div data-bind="template: { name: 'config-template', data: $data }"></div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="col-md-6">
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title"><img src="img/moon-gula.svg" height="100px" alt="Moon"> Night</h4>
-                    </div>
-                    <div class="panel-body">
-                      <div class="form-group">
-                        <label for="intervalNight"><i class="fa fa-clock-o"></i> Interval</label>
-                          <select id="intervalNight" class="form-control" data-bind="foreach: gula.timerTemplate,value: gula.intervalNight">
-                            <optgroup data-bind="attr: { label: label }, foreach: values">
-                              <option data-bind="text:$data.label,value:$data.value"></option>
-                            </optgroup>
-                        </select>
-                      </div>
-                      <h4 class="text-center muted"><i class="fa fa-cog"></i> Current settings</h4>
-                      <div data-bind="if: !gula.noConfig(gula.activeConfig)">No config items selected</div>
-                      <span data-bind="foreach: gula.configNight.configList">
-                        <div data-bind="template: { name: 'config-template', data: $data }"></div>
-                      </span>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-
-
-                  <p>You can add extra settings to Day and Night capture</p>
-                  <a data-bind="visible: gula.noConfig(gphoto.filteredItems)" class="btn btn-small btn-info addsettings" href="#settingsOverlay"><i class="fa fa-cogs fa fa-1x"></i> Add options</a>
-                  <div class="alert alert-danger animated fadeIn" data-bind="visible: !gula.noConfig(gphoto.filteredItems)"><i class="fa fa-exclamation-triangle"></i>
-                    <span data-bind="text:gphoto.errormsg"></span>
-                    <a href='#system' id='dome'>Reload here</a>
-                  </div>
-                  <hr>
-
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 ">
-              <div class="panel-group" id="capture-details">
-                <div class="panel panel-info">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#capture-details" data-target="#collapseOne">
-                        <i class="fa fa-map-marker fa-lg"></i> Camera location
-                    </h4>
-                  </div>
-                  <div id="collapseOne" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                      <div class="happyMap" style="width:100%;height:150px; margin:0 auto; position: relative;" data-bind="smallworld:{}"></div>
-                      <!-- <div class="map" style="width:100%;height:150px; margin:0 auto; position: relative;"></div> -->
-
-                      <div class="form-group">
-                        <label for="">City</label>
-                        <input type="text" class="form-control hidden-xs" autocomplete="off" id="cityListJson" data-provide="typeahead" data-bind="value:gula.camLocation,event:{change: twilight.getTwilight.bind($data)}">
-                        <select class="form-control visible-xs" data-bind="foreach: geolocation.geolocation,value:gula.camLocation">
-                            <optgroup data-bind="attr: { label: label }, foreach: cities">
-                              <option data-bind="text:$data"></option>
-                            </optgroup>
-                        </select>
-                        <p class="help-block">A big city near your camera. <br>Current timezone: <strong data-bind="text:twilight.twilightData().timezone"></strong></p>
-                      </div>
-                      <div class="form-group">
-                        <label for="twilight">Twilight</label>
-                        <select id="twilight" class="form-control" data-bind="options:twilight.twilightData().depression, optionsText:'name', optionsValue:'name',value:gula.twilight"></select>
-                        <p class="help-block">This is the time between total <a href="http://en.wikipedia.org/wiki/Twilight">darkness and eternal light</a>. </p>
-                        <table  class="table">
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>Dawn</th>
-                              <th>Dusk</th>
-                            </tr>
-                          </thead>
-                          <tbody data-bind="foreach: twilight.twilightData().depression">
-                            <tr data-bind="css: { success: $parent.twilight.twilightToggle(name,$root.gula.twilight()) }">
-                              <td data-bind="text: name"></td>
-                              <td data-bind="text: dawn.human"></td>
-                              <td data-bind="text: dusk.human"></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#capture-details" data-target="#collapseTwo">
-                        <i class="fa fa-star-half-o"></i> Twilight
-                    </h4>
-                  </div>
-                  <div id="collapseTwo" class="panel-collapse collapse">
-                    <span data-bind="text:gula.location"></span>
-                    <div class="panel-body">
-                      <img src="http://upload.wikimedia.org/wikipedia/commons/d/d1/Twilight_description_full_day.svg" width="100%" alt="">
-                      <p><small>Twilight is the illumination that is produced by sunlight scattering in the upper atmosphere, illuminating the lower atmosphere when the Sun itself is not directly visible because it is below the horizon, so that the surface of the Earth is neither completely lit nor completely dark.</small></p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title  collapsed" data-toggle="collapse" data-parent="#capture-details" data-target="#collapseThree">
-                        <i class="fa fa-rocket"></i> Moon phase
-                    </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <strong data-bind="text:twilight.twilightData().moonphase"></strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- accordion -->
-
-            </div>
-
-          </div>
-          <!-- coll -->
-
-        </div>
-        <!-- /coll -->
-
-        <!-- end capture -->
-
-        <!-- calendar -->
-        <div class="tab-pane animated fadeIn container-fluid" id="calendar">
-          <div class="row">
-            <div class="col-sm-6">
-              <h4 class="">Calendar </h4>
-              <p>For special events you can add custom intervals and camera settings. These will overwrite the default settings.</p>
-              <p><a href="" class="btn btn-info" data-bind="click: gula.calendar.addItem"><i class="fa fa-plus"></i> Add item</a>    </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="panel-group" id="accordionList" data-bind="foreach: gula.calendar.calendarList.slice(0).reverse()">
-                <div class="panel panel-success-filled panel-success animated fadeIn" data-bind="css: { 'panel-danger': !startTime(), 'panel-danger':!endTime()}">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-bind="attr:{ 'data-parent':'#accordionList','data-target' : '#itemjan' + $index()}">
-                      <!-- ko if:!startTime() -->
-                        set Start &amp; End time
-                      <!-- /ko -->
-                    <!-- ko if:startTime() -->
-                      <span data-bind="text: startTime"></span>  <i class="fa fa-arrow-right"></i> <span data-bind="text: endTime"></span>
-                    <!-- /ko -->
-
-                    </h4>
-                  </div>
-                  <div data-bind="attr:{'id':'itemjan' + $index()}" class="panel-collapse collapse">
-                    <div class="panel-body">
-                    <h4 class="muted"><i class="fa fa-exchange"></i> Date / time range</h4>
-                      <div class="form-group">
-                        <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-long-arrow-right"></i> Start</span>
-                          <input type="text" data-bind="datepicker: startTime, datepickerOptions: {autoclose: true},value:startTime" class="form-control date form_datetime_start" placeholder="Select time" readonly>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="input-group">
-                          <input type="text" data-bind="datepicker: endTime, datepickerOptions: {autoclose: true},value:endTime" class="form-control date form_datetime_end" placeholder="Select time" readonly>
-                          <span class="input-group-addon"><i class="fa fa-long-arrow-left"></i> Stop</span>
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="form-group">
-                        <label for="intervalDay"><i class="fa fa-clock-o"></i> Interval</label>
-
-                        <select class="form-control" data-bind="foreach: $root.gula.timerTemplate, value: interval">
-                          <optgroup data-bind="attr: { label: label }, foreach: values">
-                            <option data-bind="text:$data.label,value:$data.value"></option>
-                          </optgroup>
-                        </select>
-
-                      </div>
-                      <hr>
-                      <h4 class="muted"><i class="fa fa-cog"></i> Camera settings</h4>
-                      <!-- test -->
-                      <span data-bind="foreach: configObj.configList">
-
-                        <!-- <pre data-bind="text: ko.toJSON($data, null, 4)"></pre> -->
-                        <label data-bind="text: label"></label>
-                        <!-- <pre data-bind="text: ko.toJSON(options, null, 2)"></pre> -->
-                        <div class="form-group">
-                          <!-- ko if:$parent.configObj.isType(typeUI(),"RADIO")-->
-                          <select class="form-control" data-bind="options: options, optionsText: 'name', value:currentindex,optionsValue:'index', event: { change: $parent.configObj.value_changed.bind()}"></select>
-                          <!-- /ko -->
-                          <!-- ko if:$parent.configObj.isType(typeUI(),"TOGGLE")-->
-                            <select class="form-control" data-bind="value:currentindex, event: { change: $parent.configObj.value_changed.bind()}">
-                              <option value="0">Off</option>
-                              <option value="1">On</option>
-                            </select>
-                          <!-- /ko -->
-                          <!-- ko if:$parent.configObj.isType(typeUI(),"MENU")-->
-                            <select class="form-control" data-bind="options: options, optionsText: 'name', value:currentindex,optionsValue:'index', event: { change: $parent.configObj.value_changed.bind()}"></select>
-                          <!-- /ko -->
-                          <!-- ko if:$parent.configObj.isType(typeUI(),"RANGE")-->
-                            <div class="control-group range-list">
-                              <span data-bind="text: options.Bottom"></span>
-                              <input type="number" class="input-small" data-bind="value:current" >
-                              <span data-bind="text:options.Top"></span>
-                            </div>
-                            <input type="range" class="" data-bind="attr:{step: options.Step, min: options.Bottom, max: options.Top}, value: current,optionsValue: 'current'">
-                          <!-- /ko -->
-                        </div>
-                      </span>
-                      <!-- end test -->
-                      <span class="btn" data-bind="click: $root.gula.calendar.removeItem">delete</span>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <pre data-bind="text: JSON.stringify(ko.toJS(gula.calendar.calendarList), null, 2)"></pre>
-            </div>
-          </div>
-        </div>
-        <!-- end calendar -->
-
-        <!-- preview -->
-        <div class="tab-pane animated fadeIn container-fluid" id="preview">
-          <div class="row">
-            <div class="col-md-12">
-
-                  <h4><i class="fa fa-eye" ></i> Preview captured images</h4>
-
-                  <div class="row">
-                    <span data-bind="foreach:fileModel.captureFiles">
-
-                        <div class="col-md-4">
-                          <div class="thumbnail">
-                            <a href="#"><img data-bind="attr:{src:urlPath}"></a>
-                            <div class="caption">
-                              <i class="fa fa-calendar"></i> <small data-bind="text: date" ></small>
-                              <i class="fa fa-clock-o"></i> <small data-bind="text: time" ></small>
-                            </div>
-                          </div>
-                        </div>
-
-                    </span>
-                  </div>
-
-
-
-
-            </div>
-
-          </div>
-        </div>
-        <!-- end preview -->
-        <!-- upload -->
-        <div class="tab-pane animated fadeIn" id="upload">
-          <div class="row">
-            <div class="col-md-12">
-
-              <h4><i class="fa fa-cloud" data-bind="css: { 'fa-cloud-upload': gula.uploadEnabled() }"></i> Upload images</h4>
-              <p>View captured images on your webpage by allowing the upload function</p>
-                <div class="checkbox checkbox-slider checkbox-slider--a">
-                    <label>
-                        <input type="checkbox" data-bind="attr:{value:gula.uploadEnabled},checked: gula.uploadEnabled"><span>Enable upload</span>
-                    </label>
-                </div>
-
-
-            </div>
-
-            <div class="col-md-6">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title"><i class="fa fa-globe fa fa-1x "> </i> Host</h4>
-                  </div>
-                  <div class="panel-body">
-                    <div class="form-group">
-                      <label for="host">Host address</label>
-
-                      <input id="host" data-bind="value:gula.uploadHost, attr:{'disabled':!gula.uploadEnabled()}" class="form-control" type="text" required placeholder="ftp.my-kick-ass-domain.org">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="username">Username</label>
-                      <input data-bind="value:gula.uploadUsername,attr:{'disabled':!gula.uploadEnabled()}" class="form-control" type="text" required required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="username">
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password</label>
-                      <input data-bind="value:gula.uploadPassword,attr:{'disabled':!gula.uploadEnabled()}" class="form-control" type="password" required placeholder="password">
-                    </div>
-                    <div class="form-group">
-                      <p data-bind="css:{'muted':!gula.uploadEnabled()}">Before saving the settings to the GulaGula you need to check if the info you provided is correct. This will help to reduce errors.</p>
-                      <a class="btn btn-sm btn-info" data-bind="css:{'disabled':!gula.uploadEnabled()}">Test connection</a>
-                    </div>
-
-                    <h4><i class="fa fa-picture fa fa-1x "></i> Image settings</h4>
-                    <div class="form-group">
-                      <label for="path">Path</label>
-                      <input data-bind="value:gula.uploadPath,attr:{'disabled':!gula.uploadEnabled()}" type="text" class="form-control" required pattern="^/[a-zA-Z][a-zA-Z0-9-/_\.]{1,20}$" placeholder="/public_html/webcam/">
-                    </div>
-                    <div class="form-group">
-                      <label for="img">Name</label>
-
-                      <div class="input-group">
-                        <input data-bind="value:gula.uploadFile,attr:{'disabled':!gula.uploadEnabled()}" class="form-control" required pattern="^[a-zA-Z][a-zA-Z0-9-_]{1,20}$" placeholder="webcam" type="text">
-                        <span class="input-group-addon">.jpg</span>
-                      </div>
-
-                    </div>
-                    <div class="form-group">
-                      <label for="img_size">Image size</label>
-                      <select class="form-control" data-bind="attr:{'disabled':!gula.uploadEnabled()}">
-                        <option>800</option>
-                        <option>1024</option>
-                        <option>1280</option>
-                        <option>1600</option>
-                      </select>
-                    </div>
-
-                  </div>
-
-
-                </div>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- end upload -->
-
-        <!-- system -->
-        <div class="tab-pane animated fadeIn active" id="system">
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eaque, beatae, molestias, cupiditate corporis hic eos quod obcaecati libero minima doloremque explicabo iusto ab dolores placeat voluptas officia omnis nam.</p>
-            </div>
-            <div class="col-md-6">
-
-              <div class="panel-group" id="systempanels">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-edit-name">
-                        <i class="fa fa-pencil"></i> Edit name
-                    </h4>
-                  </div>
-                  <div id="panel-edit-name" class="panel-collapse collapse">
-                    <div class="panel-body">
-
-                      <div class="form-group">
-                        <label for="cameraname"><i class="fa fa-heart"></i> Camera name</label>
-                        <input class="form-control" type="text" required pattern="[a-zA-Z0-9 ]*" data-bind="value: gula.camName">
-                        <p class="help-block">Giving the camera a name will help you later. example; Museum</p>
-                      </div>
-                      <div class="form-group">
-                        <label for="cameraname"><i class="fa fa-tag"></i> Descriptive name</label>
-                        <input class="form-control" type="text" required pattern="[a-zA-Z0-9 ]*" data-bind="value: gula.slaveName">
-                        <p class="help-block">example; roof corner North</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-edit-login">
-                      <i class="fa fa-user"></i> MyGula account
-                    </h4>
-                  </div>
-                  <div id="panel-edit-login" class="panel-collapse collapse">
-
-                    <div class="panel-body" data-bind="visible:!gula.accountEnableLogin()">
-
-                        <div class="form-group">
-                          <label for="cameraname">Email</label>
-                          <input class="form-control" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" data-bind="value: gula.accountEmail">
-                        </div>
-                        <div class="form-group">
-                          <label for="cameraname">Password</label>
-                          <input class="form-control" type="password" required data-bind="value: gula.accountPassword">
-                        </div>
-                        <div class="form-group">
-                          <button class="btn btn-success" data-bind="click:ngrok.login" data-loading-text="Wait..."><i class="fa fa-sign-in"></i> Login</button>
-                        </div>
-                        <p class="help-block">Enabling this will cause this MiniGula to talk to the Main Gula server. So you can operate this miniGula even it's behind a network.</p>
-                        <div data-bind="visible:ngrok.msg" class="alert alert-warning">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <strong>Woeps!</strong>
-                            <span data-bind="text:ngrok.msg"></span>
-                        </div>
-
-                      </div>
-
-                      <div class="panel-body" data-bind="visible:gula.accountEnableLogin()">
-
-                        <div class="form-group">
-                          <p>
-                            <span class="fa-stack fa-sm">
-                              <i class="fa-stack-1x text-success fa fa-sm fa-check fa-fw"></i>
-                            </span>
-                            <strong data-bind="text: gula.accountEmail"></strong>
-                            <a href="#" class="btn btn-info btn-xs" data-bind="click:ngrok.logout" data-loading-text="Wait..."><i class="fa fa-sign-out"></i> Sign out</a>
-                          </p>
-                          <p>
-                            <span class="fa-stack fa-sm">
-                              <i class="fa-stack-1x text-success fa " data- bind="css: { 'fa-heart faa-flash animated': ngrok.ngrokStatus().length > 0}"></i>
-                              <i class="fa-stack-1x text-success fa fa-heart-o faa-pulse animated"></i>
-                            </span>
-                            Server mapped to urls:
-                            <ul data- bind="foreach:ngrok.ngrokStatus()">
-                             <li data- bind="text:PublicUrl"></li>
-                           </ul>
-                         </p>
-                       </div>
-
-                      <span data- bind="visible:ngrok.ngrokStatus().length > 0">wel of niet?</span>
-                       <button type="button" class="btn btn-default" data-action="start" data-bind="click: ngrok.getAction" data-loading-text="Starting..." >Start</button>
-                       <button type="button" class="btn btn-default" data-action="stop" data-bind="click: ngrok.getAction" data-loading-text="Stopping..." >Stop</button>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-api-key">
-                        <i class="fa fa-random"></i> API key
-                    </h4>
-                  </div>
-                  <div id="panel-api-key" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Your <strong>miniGula</strong> generated an API key the first time it connected to PhotoGula and was send by email to you.</p>
-                      <p>Only enter the API key that was send by email, if you use something else, the world might explode...</p>
-                      <p>Normaly you there's no need to edit this field.</p>
-                      <hr>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="unlockApi"> I really know what I'm doing!
-                        </label>
-                      </div>
-                      <div class="form-group">
-                        <label><i class="fa fa-fw fa-lock" id="unlockApi-icon"></i> API key</label>
-                        <input class="form-control" disabled type="text" name="apiKey" data-bind="value: gula.apiKey" required id="unlockApi">
-                        <p class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, quae, quas, inventore repellat voluptas nesciunt repudiandae cupiditate culpa unde vero nulla adipisci ab commodi rem ratione quo modi voluptatum assumenda!</p>
-                        <a href="#" class="btn btn-success"><i class="fa fa-key"></i> Test api key</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-reload-camera">
-                        <i class="fa fa-repeat"></i> Reload camera
-                    </h4>
-                  </div>
-                  <div id="panel-reload-camera" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Reloading will reset the Day and Night settings to default.</p>
-                      <p>Custom settings will be lost and need to be set accordingly to your prefered settings</p>
-                      <ul>
-                        <li>Old camera settings will be lost </li>
-                        <li>New default setting are loaded from the camera</li>
-                      </ul>
-                      <p>
-                        <label class="checkbox">
-                          <input type="checkbox" class="unlock" id="jan"> I really know what I'm doing!
-                        </label>
-                        <!--  <a class="btn btn-warning disabled" id="reloadCam" data-bind="click:gphoto.reloadCam" type="submit">Reload now</a> -->
-                        <i class="fa fa-lock"></i> <button class="btn btn-warning disabled" type="button" id="loading-reloadCam" data-bind="click:gulaAction.reloadCam" data-loading-text="reloading..."> <i class="fa fa-refresh"></i> Reload now</button>
-                      </p>
-                      <div id="reload-oke" class="alert alert-success alert-dismissable">
-                        <button type="button" class="close" data-hide="alert" aria-hidden="true">&times;</button>
-                        <strong>Done!</strong> New camera settings are available. Let's go: <a class="btn btn-info btn-sm addsettings" href="#settingsOverlay"><i class="fa fa-cogs fa fa-1x"></i> Add options</a>
-                      </div>
-                      <div id="reload-error" class="alert alert-warning alert-dismissable">
-                        <button type="button" class="close" data-hide="alert" aria-hidden="true">&times;</button>
-                        <strong>Error!</strong> Something went wrong. Check the log for more details...sorry for that
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-reboot">
-                        <i class="fa fa-bolt"></i> Reboot GulaGula
-                    </h4>
-                  </div>
-                  <div id="panel-reboot" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Only reboot when:</p>
-                      <ul>
-                        <li>USB disk not recognized</li>
-                        <li>Camera not found</li>
-                        <li>Camera no responding</li>
-                        <li>Upload errors</li>
-                      </ul>
-                      <p>
-                        <label class="checkbox">
-                          <input type="checkbox" class="unlock"> I really know what I'm doing!
-                        </label>
-                        <i class="fa fa-lock"></i> <a class="btn btn-danger disabled" type="submit">Reboot now</a>
-
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-format">
-                      <i class="fa fa-magnet"></i> Format Disks
-                    </h4>
-                  </div>
-                  <div id="panel-format" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>All disks will be formatted and prepared for capturing.</p>
-                      <p>Only format when:</p>
-                      <ul>
-                        <li>USB disk not recognized</li>
-                        <li>Delete old data</li>
-                      </ul>
-                      <p>
-                        <label class="checkbox">
-                          <input type="checkbox" class="unlock"> I really know what I'm doing!
-                        </label>
-                        <i class="fa fa-lock"></i> <a class="btn btn-danger disabled" type="submit">Format now</a>
-
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title collapsed" data-toggle="collapse" data-parent="#systempanels" data-target="#panel-log">
-                      <i class="fa fa-list"></i> Logging
-                    </h4>
-                  </div>
-                  <div id="panel-log" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <p>Pringclean the logging database. I't just nice to cleanup.</p>
-                      <p>
-                        <label class="checkbox">
-                          <input type="checkbox" class="unlock"> I really know what I'm doing!
-                        </label>
-                        <i class="fa fa-lock"></i> <a class="btn btn-warning disabled" data-bind="click:loggingMessagesData.deleteLog" data-lo ad ing-text="deleting log...">
-                          <i class="fa fa-trash-o" id="NS"></i> Clear log</a>
-                        <div class="alert alert-success alert-dismissable">
-                          <button type="button" class="close" data-hide="alert" aria-hidden="true">&times;</button>
-                          <strong>Done!</strong> Log files are cleared.
-                        </div>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /panel-group -->
-
-            </div><!-- /col -->
-        </div><!-- /row -->
-        <!-- end system -->
-      </div><!-- tab-content -->
-
-        <!--  footer -->
-        <div class="row visible-xs">
-          <div class="col-sm-2 col-xs-12">
-            <p>
-              <button class="btn-block btn btn-lg btn-success" type="button" data-bind="click:gulaAction.dump" id="loading-example-btn" data-loading-text="Saving data...">Save</button>
-            </p>
-          </div>
-        </div>
-        <!--  /footer-->
-
-    </div><!-- end container -->
-    <div id="footer">
-      <div class="container">
-
-      </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<h1>Ti Ta Toggle <small>(tt-Toggle)</small></h1>
+			<div class="col-md-3">
+				<h3>Default</h3>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"><span>default</span>
+					</label>
+				</div>
+				<h3>Icon</h3>
+				<div class="checkbox checkbox-icon">
+					<label>
+						<input type="checkbox"><span>icon</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-icon">
+					<label>
+						<input type="checkbox" checked><span>icon</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h3>slider</h3>
+				<div class="checkbox checkbox-slider">
+					<label>
+						<input type="checkbox"><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider checkbox-slider--md">
+					<label>
+						<input type="checkbox"><span>medium</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider checkbox-slider--md">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider checkbox-slider--lg">
+					<label>
+						<input type="checkbox"><span>large</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider checkbox-slider--lg">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h3>Slider a</h3>
+				<div class="checkbox checkbox-slider--a">
+					<label>
+						<input type="checkbox"><span>Slider a</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--a">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--a">
+					<label>
+						<input type="checkbox" disabled><span>disabled</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--a checkbox-slider--md">
+					<label>
+						<input type="checkbox"><span>medium</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--a checkbox-slider--lg">
+					<label>
+						<input type="checkbox"><span>large</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h3>Slider B</h3>
+				<div class="checkbox checkbox-slider--b">
+					<label>
+						<input type="checkbox"><span>Slider b</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--b">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--b checkbox-slider--md">
+					<label>
+						<input type="checkbox"><span>medium</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--b checkbox-slider--md">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--b checkbox-slider--lg">
+					<label>
+						<input type="checkbox"><span>large</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--b checkbox-slider--lg">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h3>Material</h3>
+				<div class="checkbox checkbox-slider--material">
+					<label>
+						<input type="checkbox"><span>material</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--material">
+					<label>
+						<input type="checkbox" checked><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--material checkbox-slider--md">
+					<label>
+						<input type="checkbox"><span>medium</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--material checkbox-slider--md">
+					<label>
+						<input type="checkbox"><span>checked</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--material checkbox-slider--lg">
+					<label>
+						<input type="checkbox" checked><span>large</span>
+					</label>
+				</div>
+				<div class="checkbox checkbox-slider--material checkbox-slider--lg">
+					<label>
+						<input type="checkbox"><span>checked</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-  <div id="settingsOverlay" class="overlay-settings display-no">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3><i class="fa fa-cogs fa-lg"></i> Add options<a href="#capture" id="addsettingsClose" class="pull-right"><i class="fa fa-times fa-lg"></i></a>  </h3>
-          <hr>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-6">
-          <h4><i class="fa fa-cog"></i> Available camera options</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nisi at non labore mollitia qui tempora expedita in sint rerum!</p>
-          <div class="form-group">
-            <label for="typeahead">Filter settings</label>
-            <div class="input-group">
-
-              <span class="input-group-addon"><i class="fa fa-search"></i></span>
-              <input type="text" class="form-control search-query" data-provide="typeahead" autocomplete="off" data-bind="value: gphoto.filter, valueUpdate: 'afterkeydown'" id="configList" placeholder="Filter settings" >
-              <!-- <input type="text" class="form-control" autocomplete="off" id="cityListJson" data-provide="typeahead" data-bind="value:gphoto.camLocation,event:{change: gphoto.getTwilight.bind($data)}"> -->
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filters <i class="fa fa-angle-down"></i></button>
-                <ul class="dropdown-menu pull-right fa-ul" role="menu" data-bind="foreach: gphoto.getGroups">
-                  <li><a data-bind="click:$parent.gphoto.setFilter, text:$data" href="#"> </a></li>
-
-                </ul>
-              </div><!-- /btn-group -->
-            </div><!-- /input-group -->
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h4><i class="fa fa-check "></i> Selected camera options</h4>
-          <p>These items are used for Day and Night capturing, so you can set differences between the two. Normally you would like to have a different ISO value during daytime then you would at nighttime</p>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-
-          <div class="alert alert-danger animated fadeIn" data-bind="visible: !gula.noConfig(gphoto.filteredItems)"><i class="fa fa-exclamation-triangle"></i>
-            <span data-bind="text:gphoto.errormsg"></span>
-          </div>
-
-        <span data-bind="foreach: gphoto.filteredItems" class="janList">
-            <div data-bind="template: { name: 'config-select-template', data: $data }"></div>
-        </span>
-
-        </div>
-        <div class="col-md-6">
-          <div class="alert alert-warning animated fadeIn" data-bind="visible: !gula.noConfig(gula.activeConfig)"><i class="fa fa-exclamation-triangle"></i> No config items selected.</div>
-
-          <span data-bind="foreach:{data: gula.activeConfig, afterAdd:$root.gula.anmIn,beforeRemove:$root.gula.anmOut}" class="janList">
-            <div class="panel panel-success animated fadeIn">
-              <div class="panel-heading">
-                <h5 class="panel-title" data-bind="text: label"></h5>
-              </div>
-              <div class="panel-body">
-
-                <ul class="list-inline">
-                  <li><i class="fa fa-cog"></i> current : <strong><span data-bind="text:current"></span></strong></li>
-                  <!-- <i data-bind="css:$parent.gphoto.icon(type)"></i> -->
-                  <li>Type: <i data-bind="css:$parent.gphoto.icon(typeUI)" class="fa"></i></li>
-                  <li><i class="fa fa-tag"></i> <a href="#" data-bind="click:$parent.gphoto.setFilter"><span data-bind="text:group"></span></a></li>
-                </ul>
-                <a class="btn btn-default"  data-bind="click: $parent.gula.toggleSelection"><i class="fa fa-trash-o"></i></a>
-              </div>
-
-            </div>
-
-          </span>
-        </div>
-      </div>
-
-    </div><!-- container-fluid -->
-  </div>
-
-
-<!-- TEMPLATES -->
-<script type="text/html" id="config-select-template">
-
-    <div class="panel panel-info">
-      <div class="panel-heading">
-
-        <div class="checkbox checkbox-slider checkbox-slider--a">
-            <label>
-                <input type="checkbox" data-bind="attr:{value:$data},checked: $root.gula.toggleCheck($data), event:{change:$root.gula.toggleSelection}"><span><h4 class="panel-title" data-bind="text:label"></h4></span>
-            </label>
-        </div>
-
-      </div>
-      <div class="panel-body">
-        <ul class="list-inline">
-          <li><i class="fa fa-cog"></i> current : <strong><span data-bind="text:current"></span></strong></li>
-          <!-- <i data-bind="css:$parent.gphoto.icon(type)"></i> -->
-          <li>Type: <i data-bind="css:$root.gphoto.icon(typeUI)" class="fa"></i></li>
-          <li><i class="fa fa-tag"></i> <a href="#" data-bind="click:$root.gphoto.setFilter"><span data-bind="text:group"></span></a></li>
-        </ul>
-      </div>
-    </div>
-
-</script>
-
-<script type="text/html" id="config-template">
-    <!-- ko if: $root.gula.configDay.isType(typeUI(),'radio') -->
-    <div class="form-group">
-      <label data-bind="text: label"></label>
-      <select class="form-control" data-bind="options: options, optionsText: 'name', value:currentindex,optionsValue:'index', event:{change: $root.gula.configDay.value_changed.bind()}"></select>
-    </div>
-    <!-- /ko -->
-    <!-- ko if: $root.gula.configDay.isType(typeUI(),'toggle') -->
-    <div class="form-group">
-      <label data-bind="text: label"></label>
-      <select class="form-control" data-bind="value:currentindex, event:{change: $root.gula.configDay.value_changed.bind()}">
-        <option value="0">Off</option>
-        <option value="1">On</option>
-      </select>
-    </div>
-    <!-- /ko -->
-    <!-- ko if: $root.gula.configDay.isType(typeUI(),'menu') -->
-    <div class="form-group">
-      <label data-bind="text: label"></label>
-      <select class="form-control" data-bind="options: options, optionsText: 'name', value:currentindex,optionsValue:'index', event:{change: $root.gula.configDay.value_changed.bind()}"></select>
-    </div>
-    <!-- /ko -->
-    <!-- ko if: $root.gula.configDay.isType(typeUI(),'range') -->
-    <div class="form-group">
-      <label data-bind="text: label"></label>
-      <div class="control-group range-list">
-        <span data-bind="text:options.Bottom"></span>
-        <input type="number" class="input-small" data-bind="value:current" >
-        <span data-bind="text:options.Top"></span>
-      </div>
-      <input type="range" class="" data-bind="attr:{step:options.Step, min:options.Bottom, max:options.Top}, value:current,optionsValue:'current', event:{change: $root.gula.configDay.value_changed.bind()}">
-    </div>
-    <!-- /ko -->
-</script>
-<!--  -->
-
-  <!-- Le javascript
-  ================================================== -->
-
-  <script src="js/build/production.js"></script>
-  <script src="js/build/custom.js"></script>
 
 </body>
 </html>
