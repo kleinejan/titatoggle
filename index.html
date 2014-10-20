@@ -1,206 +1,332 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>TiTaToggle - default bootstrap awesomeness toggle</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Jan Enning">
-	<link href="css/main.css" rel="stylesheet">
-</head>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ti-Ta-Toggle - default bootstrap awesomeness toggle</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="Jan Enning">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
 
-<body>
+	<body>
 
-	<div class="container">
-		<div class="row">
-			<h1>Ti Ta Toggle <small>(tt-Toggle)</small></h1>
-			<div class="col-md-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Ti Ta Toggle <small>(tt-Toggle)</small></h1>
+					<p class="lead">
+						Using awesome toggle buttons without Javascript or any other logic, other than plane form elements.
+						The Pattern is the same as Twitter-Bootstrap. So it can be implementen without a breeze.
+					</p>
+					<hr>
+				</div>
+				<div class="col-md-12">
+					<ul class="nav nav-pills">
+						<li class="active"><a href="#">CSS</a></li>
+						<li><a href="#">Default</a></li>
+						<li><a href="#">Sizes</a></li>
+						<li><a href="#">Options</a></li>
+						<li><a href="#">Slider A</a></li>
+						<li><a href="#">Slider B</a></li>
+						<li><a href="#">Slider C</a></li>
+						<li><a href="#">Howto</a></li>
+						<li><a href="#">Examples</a></li>
+					</ul>
+				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Default</h3>
-					</div>
-					<div class="panel-body">
+				<div class="col-md-12">
+					<h3>Default</h3>
+					<p>
+						The default <a href="http://getbootstrap.com/">Bootstrap</a> way of generating checkbox looks a bit like this:
 						<div class="checkbox">
 							<label>
 								<input type="checkbox"><span>default</span>
 							</label>
 						</div>
+<code>
+<pre>
+&lt;div class=&quot;checkbox&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot;&gt;default
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+</code>
+						<h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
+						Just by adding one <code>&lt;span&gt;</code> plus the class <code>.checkbox-slider--default</code> you get this result:
+						<div class="checkbox checkbox-slider--default checkbox-slider">
+							<label>
+								<input type="checkbox"><span>ttToggle example</span>
+							</label>
+						</div>
+<code>
+<pre>
+&lt;div class=&quot;checkbox checkbox-slider--default checkbox-slider&quot;&gt;
+	&lt;label&gt;
+		&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;ttToggle example&lt;/span&gt;
+	&lt;/label&gt;
+&lt;/div&gt;
+</pre>
+</code>
+					</p>
+				</div>
+				<div class="col-md-12">
+					<h3>Sizes</h3>
+					<p>
+						a propper sizing option should get the pony over the hill for your next project.
+					</p>
+					<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--sm">
+						<label>
+							<input type="checkbox"><span>Small</span>
+						</label>
+					</div>
+					<code>.checkbox-slider--sm</code>
+					<div class="checkbox checkbox-slider--default checkbox-slider">
+						<label>
+							<input type="checkbox"><span>Default</span>
+						</label>
+					</div>
+					<code> :) it's the default</code>
+					<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--md">
+						<label>
+							<input type="checkbox"><span>Medium</span>
+						</label>
+					</div>
+					<code>.checkbox-slider--md</code>
+					<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--lg">
+						<label>
+							<input type="checkbox"><span>Large</span>
+						</label>
+					</div>
+					<code>.checkbox-slider--lg</code>
+				</div>
+				<div class="col-md-3">
+
+
+
+
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Slider</h3>
+						</div>
+						<div class="panel-body">
+							<div class="checkbox checkbox-slider checkbox-slider--default">
+								<label>
+									<input type="checkbox"><span>default</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--sm">
+								<label>
+									<input type="checkbox"><span>small</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--sm">
+								<label>
+									<input type="checkbox"checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--md">
+								<label>
+									<input type="checkbox"><span>medium</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--md">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--lg">
+								<label>
+									<input type="checkbox"><span class="indicator-success">large INDICATOR</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--default checkbox-slider checkbox-slider--lg">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Slider A</h3>
+						</div>
+						<div class="panel-body">
+							<div class="checkbox checkbox-slider--a">
+								<label>
+									<input type="checkbox"><span>Slider a</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a">
+								<label>
+									<input type="checkbox" disabled><span>disabled</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--sm">
+								<label>
+									<input type="checkbox"><span>small</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--sm">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--md">
+								<label>
+									<input type="checkbox"><span>medium</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--md">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--lg">
+								<label>
+									<input type="checkbox"><span>large</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--a checkbox-slider--lg">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Slider B</h3>
+						</div>
+						<div class="panel-body">
+
+							<div class="checkbox checkbox-slider--b">
+								<label>
+									<input type="checkbox"><span>Slider b</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--sm">
+								<label>
+									<input type="checkbox"><span>small</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--sm">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--md">
+								<label>
+									<input type="checkbox"><span>medium</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--md">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--lg">
+								<label>
+									<input type="checkbox"><span>large</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--b checkbox-slider--lg">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Slider Material</h3>
+						</div>
+						<div class="panel-body">
 
-			</div>
-			<div class="col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Slider</h3>
-					</div>
-					<div class="panel-body">
-						<div class="checkbox checkbox-slider">
-							<label>
-								<input type="checkbox"><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider checkbox-slider--md">
-							<label>
-								<input type="checkbox"><span>medium</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider checkbox-slider--md">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider checkbox-slider--lg">
-							<label>
-								<input type="checkbox"><span>large</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider checkbox-slider--lg">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-					</div>
-				</div>
-
-
-
-			</div>
-			<div class="col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Slider A</h3>
-					</div>
-					<div class="panel-body">
-						<div class="checkbox checkbox-slider--a">
-							<label>
-								<input type="checkbox"><span>Slider a</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a">
-							<label>
-								<input type="checkbox" disabled><span>disabled</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a checkbox-slider--md">
-							<label>
-								<input type="checkbox"><span>medium</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a checkbox-slider--md">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a checkbox-slider--lg">
-							<label>
-								<input type="checkbox"><span>large</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--a checkbox-slider--lg">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
+							<div class="checkbox checkbox-slider--material">
+								<label>
+									<input type="checkbox"><span>material</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material">
+								<label>
+									<input type="checkbox" checked><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--sm">
+								<label>
+									<input type="checkbox"><span>small</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--sm">
+								<label>
+									<input type="checkbox"><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--md">
+								<label>
+									<input type="checkbox"><span>medium</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--md">
+								<label>
+									<input type="checkbox"><span>checked</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--lg">
+								<label>
+									<input type="checkbox" checked><span>large</span>
+								</label>
+							</div>
+							<div class="checkbox checkbox-slider--material checkbox-slider--lg">
+								<label>
+									<input type="checkbox"><span>checked</span>
+								</label>
+							</div>
 						</div>
 					</div>
 				</div>
+<div class="col-md-12">
+	<h3>CSS / LESS</h3>
+	<p>
+		To implement the ttToggle you can include the LESS file (FILE.LESS) into your project (that already uses Bootstrap).
+		Or you can use the default CSS (FILE.CSS) output.
+		https://github.com/kleinejan/titatoggle
+	</p>
+</div>
 
-
-			</div>
-			<div class="col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Slider B</h3>
-					</div>
-					<div class="panel-body">
-
-						<div class="checkbox checkbox-slider--b">
-							<label>
-								<input type="checkbox"><span>Slider b</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--b">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--b checkbox-slider--md">
-							<label>
-								<input type="checkbox"><span>medium</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--b checkbox-slider--md">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--b checkbox-slider--lg">
-							<label>
-								<input type="checkbox"><span>large</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--b checkbox-slider--lg">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Slider Material</h3>
-					</div>
-					<div class="panel-body">
-
-						<div class="checkbox checkbox-slider--material">
-							<label>
-								<input type="checkbox"><span>material</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--material">
-							<label>
-								<input type="checkbox" checked><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--material checkbox-slider--md">
-							<label>
-								<input type="checkbox"><span>medium</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--material checkbox-slider--md">
-							<label>
-								<input type="checkbox"><span>checked</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--material checkbox-slider--lg">
-							<label>
-								<input type="checkbox" checked><span>large</span>
-							</label>
-						</div>
-						<div class="checkbox checkbox-slider--material checkbox-slider--lg">
-							<label>
-								<input type="checkbox"><span>checked</span>
-							</label>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 </body>
 </html>

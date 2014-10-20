@@ -5,15 +5,19 @@
   "authors": [
     "Jan Enning <enning@kleinejan.org>"
   ],
-  "description": "Bootstrap checkbox toggle",
-  "main": "index.html",
+  "description": "Default bootstrap checkbox toggle buttons. Just default Bootstrap, add a class to use these awesome toggle buttons",
+  "main": "less/_slider.less",
   "moduleType": [
     "yui"
   ],
   "keywords": [
     "css",
     "less",
-    "bootstrap"
+    "bootstrap",
+    "togglebutton",
+    "checkbox",
+    "form",
+    "toggle"
   ],
   "license": "MIT",
   "ignore": [
