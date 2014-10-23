@@ -14,15 +14,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h1>Ti Ta Toggle <small>(tt-Toggle)</small></h1>
-					<p class="lead">
-						Using awesome toggle buttons without Javascript or any other logic, other than plane form elements.
-						The Pattern is the same as Twitter-Bootstrap. So it can be implementen without a breeze.
-					</p>
-					<hr>
+				<h1>Ti Ta Toggle <small>(tt-Toggle)</small></h1>
+				<p class="lead">
+					Using awesome toggle buttons without Javascript or any other logic, other than plane form elements.
+					The Pattern is the same as Twitter-Bootstrap. So it can be implementen without a breeze.
+				</p>
+				<hr>
 				</div>
-				<div class="col-md-12">
-					<ul class="nav nav-pills">
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<ul class="nav nav-stacked">
 						<li class="active"><a href="#">CSS</a></li>
 						<li><a href="#">Default</a></li>
 						<li><a href="#">Sizes</a></li>
@@ -34,42 +36,56 @@
 						<li><a href="#">Examples</a></li>
 					</ul>
 				</div>
+				<div class="col-md-8">
+
+
+<h3>Default</h3>
+
+	The default <a href="http://getbootstrap.com/">Bootstrap</a> way of generating checkbox looks a bit like this:
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"><span>default</span>
+		</label>
+	</div>
+	<code>
+		<pre>
+			&lt;div class=&quot;checkbox&quot;&gt;
+			&lt;label&gt;
+			&lt;input type=&quot;checkbox&quot;&gt;default
+			&lt;/label&gt;
+			&lt;/div&gt;
+		</pre>
+	</code>
+	<h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
+	Just by adding one <code>&lt;span&gt;</code> plus the class <code>.checkbox-slider--default</code> you get this result:
+	<div class="checkbox checkbox-slider--default checkbox-slider">
+		<label>
+			<input type="checkbox"><span>ttToggle example</span>
+		</label>
+	</div>
+	<code>
+		<pre>
+			&lt;div class=&quot;checkbox checkbox-slider--default checkbox-slider&quot;&gt;
+			&lt;label&gt;
+			&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;ttToggle example&lt;/span&gt;
+			&lt;/label&gt;
+			&lt;/div&gt;
+		</pre>
+	</code>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+
+				</div>
+				<div class="col-md-12">
+
+				</div>
 
 				<div class="col-md-12">
-					<h3>Default</h3>
-					<p>
-						The default <a href="http://getbootstrap.com/">Bootstrap</a> way of generating checkbox looks a bit like this:
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"><span>default</span>
-							</label>
-						</div>
-<code>
-<pre>
-&lt;div class=&quot;checkbox&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;checkbox&quot;&gt;default
-	&lt;/label&gt;
-&lt;/div&gt;
-</pre>
-</code>
-						<h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
-						Just by adding one <code>&lt;span&gt;</code> plus the class <code>.checkbox-slider--default</code> you get this result:
-						<div class="checkbox checkbox-slider--default checkbox-slider">
-							<label>
-								<input type="checkbox"><span>ttToggle example</span>
-							</label>
-						</div>
-<code>
-<pre>
-&lt;div class=&quot;checkbox checkbox-slider--default checkbox-slider&quot;&gt;
-	&lt;label&gt;
-		&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;ttToggle example&lt;/span&gt;
-	&lt;/label&gt;
-&lt;/div&gt;
-</pre>
-</code>
-					</p>
+
+
 				</div>
 				<div class="col-md-12">
 					<h3>Sizes</h3>
@@ -101,7 +117,7 @@
 					</div>
 					<code>.checkbox-slider--lg</code>
 				</div>
-<!-- EXAMPLES -->
+				<!-- EXAMPLES -->
 				<div class="col-md-3">
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -140,7 +156,7 @@
 							</div>
 							<div class="checkbox checkbox-slider--default checkbox-slider--lg">
 								<label>
-									<input type="checkbox"><span class="indicator-success">large INDICATOR</span>
+									<input type="checkbox"><span>large INDICATOR</span>
 								</label>
 							</div>
 							<div class="checkbox checkbox-slider--default checkbox-slider--lg">
@@ -310,18 +326,53 @@
 						</div>
 					</div>
 				</div>
-<div class="col-md-12">
-	<h3>CSS / LESS</h3>
-	<p>
-		To implement the ttToggle you can include the LESS file (FILE.LESS) into your project (that already uses Bootstrap).
-		Or you can use the default CSS (FILE.CSS) output.
-		https://github.com/kleinejan/titatoggle
-	</p>
-</div>
 
+				<div class="col-md-12">
+					<h3>Indicator</h3>
+					<p>
+						Small visual que for the label to show that the checkbox is checked. Not so usable for the visually impaired, due
+						to the fact it's only a color and contrast is to low.
+					</p>
+					<div class="checkbox checkbox-slider--default">
+						<label>
+							<input type="checkbox" checked><span class="indicator-success">success</span>
+						</label>
+					</div>
+					<div class="checkbox checkbox-slider--default">
+						<label>
+							<input type="checkbox" checked><span class="indicator-info">info</span>
+						</label>
+					</div>
+					<div class="checkbox checkbox-slider--default">
+						<label>
+							<input type="checkbox" checked><span class="indicator-warning">warning</span>
+						</label>
+					</div>
+					<div class="checkbox checkbox-slider--default">
+						<label>
+							<input type="checkbox" checked><span class="indicator-danger">danger</span>
+						</label>
+					</div>
+					<h4>usage</h4>
+					<p>
+						<code> ... &lt;input type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;indicator-success&quot;&gt;success&lt;/span&gt; ... </code>
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="col-md-12">
+		<h3>CSS / LESS</h3>
+		<p>
+			To implement the ttToggle you can include the LESS file (FILE.LESS) into your project (that already uses Bootstrap).
+			Or you can use the default CSS (FILE.CSS) output.
+			https://github.com/kleinejan/titatoggle
+		</p>
+	</div>
+
 </div>
+</div>
+
 </body>
 </html>
