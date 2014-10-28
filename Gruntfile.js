@@ -9,7 +9,7 @@ require( 'load-grunt-tasks' )( grunt );
             styles: {
                 // Which files to watch (all .less files recursively in the less directory)
                 files: ['less/*.less'],
-                tasks: ['clean','less:develop','shell:jekyllBuild'],
+                tasks: ['less:develop','shell:jekyllBuild'],
                 options: {
                     nospawn: true,
                     atBegin:true
@@ -37,7 +37,7 @@ require( 'load-grunt-tasks' )( grunt );
             docs: {
                 src: ['docs']
             },
-            docs: {
+            dist: {
                 src: ['dist']
             }
         },
