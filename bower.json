@@ -1,6 +1,6 @@
 {
   "name": "titatoggle",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "https://github.com/kleinejan/titatoggle",
   "authors": [
     "Jan Enning <enning@kleinejan.org>"
@@ -15,13 +15,13 @@
   ],
     "ignore": [
     "/.*",
-    "**/.*",
     "_config.yml",
     "_includes",
     "_layouts",
     "node_modules",
     "bower_components",
     "css",
+    "docs",
     "less",
     "Gruntfile.js",
     "index.html",
