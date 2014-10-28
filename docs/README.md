@@ -1,15 +1,14 @@
-TiTatoggle - ttToggle
+TiTatoggle - (bs3 addon without JS)
 ==========
 
-Pure css toggle buttons based on the Bootstrap checkbox pattern
+Using awesome toggle buttons without Javascript or any other logic, other than plane form elements. The Pattern is the same as Twitter-Bootstrap. So it can be implementen without a breeze.
 
-Simple add an extra class to the default pattern to get this awesome toggle button.
-No JS, just plane CSS and some html.
 
-'''html
+
+```html
 <div class="checkbox checkbox-slider">
 	<label>
 		<input type="checkbox"><span>checked</span>
 	</label>
 </div>
- '''
+```
