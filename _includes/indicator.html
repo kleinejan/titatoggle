@@ -1,0 +1,57 @@
+<h3 id="indicator">Indicator</h3>
+<p class="lead">
+	Small visual que for the label to show that the checkbox is checked.
+</p>
+<div class="alert alert-warning">
+	Not so usable for the visually impaired, due
+	to the fact it's only a color and contrast is to low.
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-success">success</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-info">info</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-warning">warning</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-danger">danger</span>
+	</label>
+</div>
+
+{% highlight html %}
+
+<div class="checkbox ...">
+...
+	<span class="indicator-success">danger</span>
+...
+</div>
+
+<div class="checkbox ...">
+...
+	<span class="indicator-info">danger</span>
+...
+</div>
+
+<div class="checkbox ...">
+...
+	<span class="indicator-warning">danger</span>
+...
+</div>
+
+<div class="checkbox ...">
+...
+	<span class="indicator-danger">danger</span>
+...
+</div>
+{% endhighlight%}
+
+<hr>

@@ -1,0 +1,57 @@
+<h3 id="intro">Intro</h3>
+<p class="lead">
+	The only difference between default Bootstrap is the additional <code>span</code>. After that it's only a question of adding a class that fits your needs.
+</p>
+
+<h4>Bootstrap 3</h4>
+<p>
+	The <a href="http://getbootstrap.com/">Bootstrap 3</a> default way of generating checkbox looks a like this:
+</p>
+<div class="checkbox">
+	<label>
+		<input type="checkbox">default Bootstrap 3
+	</label>
+</div>
+{% highlight html %}
+<div class="checkbox">
+	<label>
+		<input type="checkbox">default Bootstrap 3
+	</label>
+</div>
+{% endhighlight%}
+
+<h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
+<p>
+	Just by adding one <code>&lt;span&gt;</code> plus the class <code>.checkbox-slider--TYPE</code> you get this result:
+</p>
+
+	<!-- <div class="panel-heading">
+	<h3 class="panel-title">examples</h3>
+</div> -->
+
+	<div class="checkbox checkbox-slider--default">
+		<label>
+			<input type="checkbox"><span>TiTaToggle</span>
+		</label>
+	</div>
+
+
+		{% highlight html %}
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox"><span>TiTaToggle</span>
+	</label>
+</div>
+		{% endhighlight%}
+
+
+
+<div class="alert alert-danger">
+	<p>
+		<h4>Note:</h4>
+		<p>
+			Don't forget to add the <code>span</code> after the <code>input</code>
+		</p>
+	</p>
+</div>
+<hr>
