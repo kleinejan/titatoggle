@@ -87,6 +87,6 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-clean');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('deploy', ['clean','less:develop','less:deploy','copy:deploy','shell:jekyllBuild']);
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', 'watch');
 
 };
