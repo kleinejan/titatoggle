@@ -49,7 +49,7 @@ require( 'load-grunt-tasks' )( grunt );
                 ]
             }
         },
-        
+
         shell : {
             jekyllBuild : {
                 command : 'jekyll build'
@@ -64,7 +64,7 @@ require( 'load-grunt-tasks' )( grunt );
                     sourceMap: true
                 },
                 files: {
-                    "css/main.css": "less/main.less"
+                    "docs/css/main.css": "less/main.less"
                 }
             },
             deploy: {
