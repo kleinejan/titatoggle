@@ -6,10 +6,23 @@
     "Jan Enning <enning@kleinejan.org>"
   ],
   "description": "Default bootstrap checkbox toggle buttons. Just default Bootstrap, add a class to use these awesome toggle buttons",
-  "main": ["dist/_titatoggle.less","dist/titatoggle-dist.css"],
+  "main": [
+      "dist/_titatoggle.less",
+      "dist/titatoggle-dist.css"
+      ],
   "moduleType": [
     "yui"
   ],
+    "ignore": [
+    "/.*",
+    "_config.yml",
+    "_includes",
+    "_layouts",
+    "docs",
+    "Gruntfile.js",
+    "index.html",
+    "package.json"
+],
   "keywords": [
     "css",
     "less",
