@@ -9,7 +9,7 @@ require( 'load-grunt-tasks' )( grunt );
             styles: {
                 // Which files to watch (all .less files recursively in the less directory)
                 files: ['less/*.less'],
-                tasks: ['clean','less:develop','shell:jekyllBuild'],
+                tasks: ['less:develop','shell:jekyllBuild'],
                 options: {
                     nospawn: true,
                     atBegin:true
@@ -37,15 +37,18 @@ require( 'load-grunt-tasks' )( grunt );
             docs: {
                 src: ['docs']
             },
-            docs: {
+            dist: {
                 src: ['dist']
+            },
+            css: {
+                src: ['css']
             }
         },
         copy: {
             deploy: {
                 files: [
                 // includes files within path
-                {expand: true,  cwd: 'less/', src: ['_titatoggle.less'], dest: 'dist/'},
+                { expand: true,  cwd: 'less/', src: ['_titatoggle.less'], dest: 'dist/' },
                 ]
             }
         },
@@ -64,7 +67,7 @@ require( 'load-grunt-tasks' )( grunt );
                     sourceMap: true
                 },
                 files: {
-                    "docs/css/main.css": "less/main.less"
+                    "css/main.css": "less/main.less"
                 }
             },
             deploy: {
@@ -86,7 +89,7 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','copy:deploy','shell:jekyllBuild']);
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','copy:deploy','shell:jekyllBuild','clean:css']);
+    grunt.registerTask('default', 'watch');
 
 };
