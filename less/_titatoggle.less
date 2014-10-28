@@ -394,9 +394,43 @@ Slider C Sizes
 /*******************************************************
 State Disabled
 *******************************************************/
-.checkbox-slider--a input:disabled{
-	+ span:after{background:gray;color:white;}
+.checkbox-slider--default input:disabled{
+	+ span:after{background:@gray-light;}
 	+ span:before{box-shadow:0 0 0 black;}
+	+ span {
+		color:@gray-light;
+	}
+}
+.checkbox-slider--a input:disabled{
+	+ span:after{background:@gray-light; color:@white;}
+	+ span:before{box-shadow:0 0 0 black;}
+	+ span {
+		color:@gray-light;
+	}
+}
+.checkbox-slider--b input:disabled{
+
+	+ span:after{
+		border:solid transparent 2px;
+		.border-radius(@scrubber-width-lg);
+	}
+	+ span:before{ box-shadow:0 0 0 black; }
+	+ span {
+		color:@gray-light;
+	}
+}
+.checkbox-slider--c input:disabled{
+	&:checked + span:after {
+		background:@gray-light;
+	}
+
+	+ span:after{
+		border-color:@gray-light;
+	}
+	+ span:before{ background:@gray-light; }
+	+ span {
+		color:@gray-light;
+	}
 }
 
 /*******************************************************
