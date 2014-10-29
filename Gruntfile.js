@@ -9,7 +9,7 @@ require( 'load-grunt-tasks' )( grunt );
             styles: {
                 // Which files to watch (all .less files recursively in the less directory)
                 files: ['less/*.less'],
-                tasks: ['less:develop','shell:jekyllBuild'],
+                tasks: ['less:develop','autoprefixer:docs_file','shell:jekyllBuild'],
                 options: {
                     nospawn: true,
                     atBegin:true
@@ -79,7 +79,22 @@ require( 'load-grunt-tasks' )( grunt );
                 }
             }
         },
+        autoprefixer: {
 
+            options: {
+              browsers: ['last 2 versions']
+            },
+
+            // prefix the specified file
+            docs_file: {
+              src: 'css/main.css',
+              dest: 'css/main.css'
+            },
+            deploy_file: {
+              src: 'dist/titatoggle-dist.css',
+              dest: 'dist/titatoggle-dist.css'
+            },
+        },
 
     });
 
@@ -88,8 +103,9 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','copy:deploy','shell:jekyllBuild','clean:css']);
+    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','autoprefixer','copy:deploy','shell:jekyllBuild','clean:css']);
     grunt.registerTask('default', 'watch');
 
 };
