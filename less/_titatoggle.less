@@ -17,6 +17,18 @@ Variables
 @slider-text-checked:"On";
 @slider-text-checked-color:#fff;
 
+/*******************************************************
+Animation
+*******************************************************/
+
+// .keyframes(~'popIn, 0%{ transform: scale(1); opacity:.5; }50%{ transform: scale(0.9); opacity:.8; } 100%{ transform: scale(1); opacity:1 }');
+
+// @keyframes popIn {
+//     0%   {transform: red;}
+//     25%  {background: yellow;}
+//     50%  {background: blue;}
+//     100% {background: green;}
+// }
 
 /*******************************************************
 Main Slider basics
@@ -31,18 +43,14 @@ Main Slider basics
 		right:0;
 		bottom:0;
 		left:0;
-		.square(0%);
+		width:0%;
+		height:0%;
 		margin:0 0;
 		cursor:pointer;
 		.opacity(0);
 
 		+ span {
 			cursor:pointer;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
 			user-select: none;
 
 			&:before {
@@ -76,7 +84,8 @@ Main Slider
 				width:@scrubber-width-default * 2;
 				background:rgba(100,100,100,.2);
 				box-shadow:inset 0 0 5px rgba(0,0,0,.8);
-				.transition(background .2s ease-in-out);
+				// .transition(background .2s ease-in-out);
+				transition: background .2s ease-out;
 			}
 			// Off State
 			&:after {
@@ -87,7 +96,8 @@ Main Slider
 				top:0;
 				display:block;
 				background:@white;
-				.transition(margin-left 0.1s ease-in-out);
+				// .transition(margin-left 0.1s ease-in-out);
+				transition: margin-left 0.1s ease-in-out;
 				text-align:center;
 				font-weight:bold;
 				content:"";
@@ -99,7 +109,8 @@ Main Slider
 			content:"";
 		}
 		&:checked + span:before {
-			.transition(background .2s ease-in);
+			// .transition(background .2s ease-in);
+			transition: background .2s ease-in;
 		}
 
 	}
@@ -229,7 +240,6 @@ Slider A SIZES
 		}
 	}
 }
-.keyframes(~'popIn, 0%{ transform: scale(1); opacity:.5; }50%{ transform: scale(0.9); opacity:.8; } 100%{ transform: scale(1); opacity:1 }');
 
 /*******************************************************
 Slider B
@@ -245,7 +255,7 @@ Slider B
 		}
 
 		+ span:before {
-			.border-radius(@scrubber-width-default);
+			border-radius:@scrubber-width-default;
 			width:@scrubber-width-default * 2;
 		}
 
@@ -254,14 +264,16 @@ Slider B
 			content:"";
 			width:@scrubber-width-default;
 			border:solid transparent 2px;
-			.border-radius(@scrubber-width-default);
+			background-clip: padding-box;
+			border-radius:@scrubber-width-default;
 		}
 
 		&:checked + span:after {
 			content:"";
 			margin-left:@scrubber-width-default;
 			border:solid transparent 2px;
-			.animation(popIn .3s ease-in normal);
+			background-clip: padding-box;
+			// .animation(popIn .3s ease-in normal);
 
 		}
 
@@ -280,12 +292,12 @@ Slider B Sizes
 	&.checkbox-slider-md {
 
 		input + span:before {
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 
 		}
 
 		input + span:after{
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 		}
 
 	}
@@ -293,11 +305,11 @@ Slider B Sizes
 	&.checkbox-slider-lg{
 
 		input + span:before {
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 
 		input + span:after{
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 
 	}
@@ -306,6 +318,7 @@ Slider B Sizes
 /*******************************************************
 Slider C
 *******************************************************/
+
 .checkbox-slider--c {
 
 	.checkbox-slider;
@@ -328,7 +341,7 @@ Slider C
 			box-shadow:none;
 			width:@scrubber-width-default;
 			border:solid @gray 2px;
-			.border-radius(@scrubber-width-default);
+			border-radius:@scrubber-width-default;
 		}
 
 		&:checked + span:after {
@@ -367,7 +380,7 @@ Slider C Sizes
 
 		input + span:after{
 			width:@scrubber-width-md;
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 		}
 	}
 
@@ -378,7 +391,7 @@ Slider C Sizes
 		}
 		input + span:after{
 			width:@scrubber-width-lg;
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 	}
 
@@ -387,6 +400,7 @@ Slider C Sizes
 /*******************************************************
 State Disabled
 *******************************************************/
+
 .checkbox-slider--default input:disabled{
 	+ span:after{background:@gray-light;}
 	+ span:before{box-shadow:0 0 0 black;}
@@ -405,7 +419,7 @@ State Disabled
 
 	+ span:after{
 		border:solid transparent 2px;
-		.border-radius(@scrubber-width-lg);
+		border-radius:@scrubber-width-lg;
 	}
 	+ span:before{ box-shadow:0 0 0 black; }
 	+ span {
