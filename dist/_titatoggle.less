@@ -17,10 +17,41 @@ Variables
 @slider-text-checked:"On";
 @slider-text-checked-color:#fff;
 
+/*******************************************************
+Animation
+*******************************************************/
+
+@keyframes popIn {
+    0%   {transform: scale(1,1);}
+    25%  {transform: scale(1.2,1);}
+    50%  {transform: scale(1.4,1);}
+    100% {transform: scale(1,1);}
+}
+
+@keyframes popOut {
+	0%   {transform: scale(1,1);}
+	25%  {transform: scale(1.2,1);}
+	50%  {transform: scale(1.4,1);}
+	100% {transform: scale(1,1);}
+}
+
+@keyframes splashIn {
+	0%   {transform: scale(1); opacity:1;}
+	25%  {transform: scale(1.1); opacity:.8}
+	50%  {transform: scale(1.1); opacity:.9;}
+	100% {transform: scale(1); opacity:1;}
+}
+@keyframes splashOut {
+	0%   {transform: scale(1); opacity:1;}
+	25%  {transform: scale(1); opacity:.8}
+	50%  {transform: scale(1); opacity:.9;}
+	100% {transform: scale(.5); opacity:1;}
+}
 
 /*******************************************************
 Main Slider basics
 *******************************************************/
+
 .checkbox-toggle {
 	position: relative;
 
@@ -31,18 +62,14 @@ Main Slider basics
 		right:0;
 		bottom:0;
 		left:0;
-		.square(0%);
+		width:0%;
+		height:0%;
 		margin:0 0;
 		cursor:pointer;
 		.opacity(0);
 
 		+ span {
 			cursor:pointer;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
 			user-select: none;
 
 			&:before {
@@ -61,6 +88,7 @@ Main Slider basics
 /*******************************************************
 Main Slider
 *******************************************************/
+
 .checkbox-slider {
 
 	.checkbox-toggle;
@@ -76,7 +104,7 @@ Main Slider
 				width:@scrubber-width-default * 2;
 				background:rgba(100,100,100,.2);
 				box-shadow:inset 0 0 5px rgba(0,0,0,.8);
-				.transition(background .2s ease-in-out);
+				transition: background .2s ease-out;
 			}
 			// Off State
 			&:after {
@@ -87,7 +115,7 @@ Main Slider
 				top:0;
 				display:block;
 				background:@white;
-				.transition(margin-left 0.1s ease-in-out);
+				transition: margin-left 0.1s ease-in-out;
 				text-align:center;
 				font-weight:bold;
 				content:"";
@@ -99,7 +127,7 @@ Main Slider
 			content:"";
 		}
 		&:checked + span:before {
-			.transition(background .2s ease-in);
+			transition: background .2s ease-in;
 		}
 
 	}
@@ -110,6 +138,7 @@ Main Slider
 /*******************************************************
 Slider default
 *******************************************************/
+
 .checkbox-slider--default {
 
 	.checkbox-slider;
@@ -132,6 +161,7 @@ Slider default
 /*******************************************************
 Slider A
 *******************************************************/
+
 .checkbox-slider--a {
 
 	.checkbox-slider;
@@ -169,6 +199,7 @@ Slider A
 /*******************************************************
 Slider A SIZES
 *******************************************************/
+
 .checkbox-slider--a {
 
 	&.checkbox-slider-sm{
@@ -229,11 +260,11 @@ Slider A SIZES
 		}
 	}
 }
-.keyframes(~'popIn, 0%{ transform: scale(1); opacity:.5; }50%{ transform: scale(0.9); opacity:.8; } 100%{ transform: scale(1); opacity:1 }');
 
 /*******************************************************
 Slider B
 *******************************************************/
+
 .checkbox-slider--b {
 
 	.checkbox-slider;
@@ -245,7 +276,7 @@ Slider B
 		}
 
 		+ span:before {
-			.border-radius(@scrubber-width-default);
+			border-radius:@scrubber-width-default;
 			width:@scrubber-width-default * 2;
 		}
 
@@ -254,14 +285,18 @@ Slider B
 			content:"";
 			width:@scrubber-width-default;
 			border:solid transparent 2px;
-			.border-radius(@scrubber-width-default);
+			background-clip: padding-box;
+			border-radius:@scrubber-width-default;
 		}
-
+		&:not(:checked) + span:after {
+			animation: popOut ease-in .3s normal;
+		}
 		&:checked + span:after {
 			content:"";
 			margin-left:@scrubber-width-default;
 			border:solid transparent 2px;
-			.animation(popIn .3s ease-in normal);
+			background-clip: padding-box;
+			animation: popIn ease-in .3s normal;
 
 		}
 
@@ -272,20 +307,22 @@ Slider B
 	}
 
 }
+
 /*******************************************************
 Slider B Sizes
 *******************************************************/
+
 .checkbox-slider--b {
 
 	&.checkbox-slider-md {
 
 		input + span:before {
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 
 		}
 
 		input + span:after{
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 		}
 
 	}
@@ -293,19 +330,38 @@ Slider B Sizes
 	&.checkbox-slider-lg{
 
 		input + span:before {
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 
 		input + span:after{
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 
 	}
 }
 
 /*******************************************************
+Slider B-flat
+*******************************************************/
+
+.checkbox-slider--b-flat {
+	.checkbox-slider--b;
+
+	input{
+
+		+ span:before {
+			box-shadow:none;
+
+		}
+
+	}
+
+}
+
+/*******************************************************
 Slider C
 *******************************************************/
+
 .checkbox-slider--c {
 
 	.checkbox-slider;
@@ -328,20 +384,21 @@ Slider C
 			box-shadow:none;
 			width:@scrubber-width-default;
 			border:solid @gray 2px;
-			.border-radius(@scrubber-width-default);
+			border-radius:@scrubber-width-default;
 		}
 
 		&:checked + span:after {
 			background:@brand-success;
 			margin-left:@scrubber-width-default;
 			border:solid @brand-success 2px;
-
+			animation: splashIn ease-in .3s normal;
 		}
 
 		&:checked + span:before {
 			background:@brand-success;
 
 		}
+
 	}
 
 }
@@ -367,7 +424,7 @@ Slider C Sizes
 
 		input + span:after{
 			width:@scrubber-width-md;
-			.border-radius(@scrubber-width-md);
+			border-radius:@scrubber-width-md;
 		}
 	}
 
@@ -378,15 +435,41 @@ Slider C Sizes
 		}
 		input + span:after{
 			width:@scrubber-width-lg;
-			.border-radius(@scrubber-width-lg);
+			border-radius:@scrubber-width-lg;
 		}
 	}
 
 }
 
 /*******************************************************
+Slider C-weight
+*******************************************************/
+
+.checkbox-slider--c-weight {
+
+	.checkbox-slider--c;
+
+	input{
+
+		+ span:before {
+			height:1px !important; // needs to be
+		}
+
+		&:checked + span:before {
+			height:2px !important; // needs to be
+		}
+		&:not(:checked) + span:after {
+			transform:scale(.7);
+			left:-6px
+		}
+	}
+
+}
+
+/******************************************************
 State Disabled
 *******************************************************/
+
 .checkbox-slider--default input:disabled{
 	+ span:after{background:@gray-light;}
 	+ span:before{box-shadow:0 0 0 black;}
@@ -405,7 +488,7 @@ State Disabled
 
 	+ span:after{
 		border:solid transparent 2px;
-		.border-radius(@scrubber-width-lg);
+		border-radius:@scrubber-width-lg;
 	}
 	+ span:before{ box-shadow:0 0 0 black; }
 	+ span {
@@ -429,6 +512,7 @@ State Disabled
 /*******************************************************
 Indicators
 *******************************************************/
+
 input:checked + .indicator-success {
 	color:@brand-success;
 }
@@ -537,23 +621,28 @@ Sizes
 /*******************************************************
 Variations
 *******************************************************/
+
 // info
 .checkbox-slider-info {
 	&.checkbox-slider--default,
 	&.checkbox-slider--a,
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-info;
 		}
 	}
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 				border-color:@brand-info;
 			}
 	}
 
 	&.checkbox-slider--b,
-	&.checkbox-slider--c {
+	&.checkbox-slider--b-flat,
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:before {
 			background:@brand-info;
 		}
@@ -563,19 +652,23 @@ Variations
 .checkbox-slider-warning {
 	&.checkbox-slider--default,
 	&.checkbox-slider--a,
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-warning;
 		}
 	}
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 				border-color:@brand-warning;
 			}
 	}
 
 	&.checkbox-slider--b,
-	&.checkbox-slider--c {
+	&.checkbox-slider--b-flat,
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:before {
 			background:@brand-warning;
 		}
@@ -585,19 +678,23 @@ Variations
 .checkbox-slider-danger {
 	&.checkbox-slider--default,
 	&.checkbox-slider--a,
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-danger;
 		}
 	}
-	&.checkbox-slider--c {
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 				border-color:@brand-danger;
 			}
 	}
 
 	&.checkbox-slider--b,
-	&.checkbox-slider--c {
+	&.checkbox-slider--b-flat,
+	&.checkbox-slider--c,
+	&.checkbox-slider--c-weight {
 		input:checked + span:before {
 			background:@brand-danger;
 		}
