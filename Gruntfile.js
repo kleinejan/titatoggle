@@ -71,11 +71,16 @@ require( 'load-grunt-tasks' )( grunt );
                 }
             },
             deploy: {
+                files: {
+                    "dist/titatoggle-dist.css": "less/slider.less"
+                }
+            },
+            deployMin: {
                 options: {
                     cleancss: true
                 },
                 files: {
-                    "dist/titatoggle-dist.css": "less/slider.less"
+                    "dist/titatoggle-dist-min.css": "less/slider.less"
                 }
             }
         },
@@ -105,7 +110,7 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-autoprefixer');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','autoprefixer','copy:deploy','shell:jekyllBuild','clean:css']);
+    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy','shell:jekyllBuild','clean:css']);
     grunt.registerTask('default', 'watch');
 
 };
