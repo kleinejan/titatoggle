@@ -48,6 +48,7 @@ Animation
 	100% {transform: scale(.5); opacity:1;}
 }
 
+
 /*******************************************************
 Main Slider basics
 *******************************************************/
@@ -67,6 +68,7 @@ Main Slider basics
 		margin:0 0;
 		cursor:pointer;
 		.opacity(0);
+
 
 		+ span {
 			cursor:pointer;
@@ -145,16 +147,69 @@ Slider default
 
 	input + span:after {
 		background:@white;
-		border:solid transparent 1px;
+		border:solid transparent 2px;
 		background-clip:content-box;
 	}
 
 	input:checked + span:after {
 
 		background:@brand-success;
-		border:solid transparent 1px;
+		border:solid transparent 2px;
 		background-clip:content-box;
 	}
+
+}
+
+/*******************************************************
+Slider default rounded
+*******************************************************/
+
+.checkbox-slider--a-rounded {
+
+    .checkbox-slider--default;
+
+    input + span:after,
+    input + span:before{
+        border-radius:@border-radius-base;
+    }
+
+    input + span:after,
+    input:checked + span:after{
+        border:solid transparent 2px;
+        background-clip:content-box;
+    }
+}
+
+/*******************************************************
+Slider default rounded Sizes
+*******************************************************/
+
+.checkbox-slider--a-rounded{
+
+    &.checkbox-slider-sm{
+
+        input + span:before,
+        input + span:after {
+            border-radius:@border-radius-small;
+        }
+    }
+
+    &.checkbox-slider-md{
+
+        input + span:before,
+        input + span:after{
+            border-radius:@border-radius-base;
+        }
+    }
+
+    &.checkbox-slider-lg{
+
+        input + span:before,
+        input + span:after{
+
+            border-radius:@border-radius-large;
+        }
+    }
 
 }
 
@@ -186,7 +241,6 @@ Slider A
 		}
 
 		&:checked + span:after {
-
 			content:@slider-text-checked;
 			color:@slider-text-checked-color;
 			background:@brand-success;
