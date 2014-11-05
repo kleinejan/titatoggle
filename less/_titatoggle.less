@@ -68,6 +68,7 @@ Main Slider basics
 		cursor:pointer;
 		.opacity(0);
 
+
 		+ span {
 			cursor:pointer;
 			user-select: none;
@@ -134,6 +135,73 @@ Main Slider
 
 }
 
+// test
+/*******************************************************
+Slider default
+*******************************************************/
+
+.checkbox-slider--test {
+
+    .checkbox-slider;
+
+    input{
+        .opacity(1);
+        visibility: hidden;
+    }
+
+    input:before{
+
+        visibility: visible;
+        content:"";
+        width:10px;
+        height:10px;
+        background:rgba(1,1,1,.5);
+        display:block;
+        .opacity(1);
+        left:0px;
+        top:0px;
+    }
+
+    input:after{
+
+        visibility: visible;
+        content:"";
+        width:10px;
+        height:10px;
+        background:rgba(255,1,1,.5);
+        display:block;
+        left:30px;
+        top:0px;
+        position:absolute;
+        .opacity(1);
+        	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid red;
+	border-bottom: 10px solid transparent;
+
+    }
+input:checked:after{
+border-top: 10px solid transparent;
+border-left: 0;
+border-right: 20px solid green;
+border-bottom: 10px solid transparent;
+}
+    input + span:after {
+        background:@white;
+        border:solid transparent 1px;
+        background-clip:content-box;
+    }
+
+    input:checked + span:after {
+
+        background:@brand-success;
+        border:solid transparent 1px;
+        background-clip:content-box;
+    }
+
+}
+// end test
 
 /*******************************************************
 Slider default

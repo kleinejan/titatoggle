@@ -4137,6 +4137,123 @@ Main Slider
 /*******************************************************
 Slider default
 *******************************************************/
+.checkbox-slider--test {
+  position: relative;
+}
+.checkbox-slider--test input {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  margin: 0 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.checkbox-slider--test input + span {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox-slider--test input + span:before {
+  position: absolute;
+  left: 0px;
+  display: inline-block;
+}
+.checkbox-slider--test input + span > h4 {
+  display: inline;
+}
+.checkbox-slider--test input + span {
+  padding-left: 40px;
+}
+.checkbox-slider--test input + span:before {
+  content: "";
+  height: 20px;
+  width: 40px;
+  background: rgba(100, 100, 100, 0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  transition: background 0.2s ease-out;
+}
+.checkbox-slider--test input + span:after {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  display: block;
+  background: #ffffff;
+  transition: margin-left 0.1s ease-in-out;
+  text-align: center;
+  font-weight: bold;
+  content: "";
+}
+.checkbox-slider--test input:checked + span:after {
+  margin-left: 20px;
+  content: "";
+}
+.checkbox-slider--test input:checked + span:before {
+  transition: background 0.2s ease-in;
+}
+.checkbox-slider--test input {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  visibility: hidden;
+}
+.checkbox-slider--test input:before {
+  visibility: visible;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: rgba(1, 1, 1, 0.5);
+  display: block;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  left: 0px;
+  top: 0px;
+}
+.checkbox-slider--test input:after {
+  visibility: visible;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 1, 1, 0.5);
+  display: block;
+  left: 30px;
+  top: 0px;
+  position: absolute;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 20px solid red;
+  border-bottom: 10px solid transparent;
+}
+.checkbox-slider--test input:checked:after {
+  border-top: 10px solid transparent;
+  border-left: 0;
+  border-right: 20px solid green;
+  border-bottom: 10px solid transparent;
+}
+.checkbox-slider--test input + span:after {
+  background: #ffffff;
+  border: solid transparent 1px;
+  background-clip: content-box;
+}
+.checkbox-slider--test input:checked + span:after {
+  background: #5cb85c;
+  border: solid transparent 1px;
+  background-clip: content-box;
+}
+/*******************************************************
+Slider default
+*******************************************************/
 .checkbox-slider--default {
   position: relative;
 }
