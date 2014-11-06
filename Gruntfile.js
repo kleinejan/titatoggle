@@ -100,6 +100,12 @@ require( 'load-grunt-tasks' )( grunt );
               dest: 'dist/titatoggle-dist.css'
             },
         },
+        'gh-pages': {
+            options: {
+              base: 'gh-pages'
+            },
+            src: ['**']
+          }
 
     });
 
@@ -109,6 +115,7 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-gh-pages');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('deploy', ['clean','shell:jekyllBuild','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy']);
     grunt.registerTask('default', 'watch');
