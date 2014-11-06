@@ -5,7 +5,6 @@ Using awesome toggle buttons without Javascript or any other logic, other than p
 The Pattern is the same as Twitter-Bootstrap. So it can be implemented without a breeze.
 
 
-
 ```html
 <div class="checkbox checkbox-slider--X">
 	<label>
