@@ -7,7 +7,7 @@ url: "http://kleinejan.github.io/titatoggle/"
 github_username:  kleinejan
 
 # Build settings
-destination: docs
+destination: gh-pages
 markdown: kramdown
 permalink: pretty
 exclude: [less,bower_components,bower.json,node_modules,'package.json','Gruntfile.js','dist']

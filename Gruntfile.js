@@ -9,7 +9,7 @@ require( 'load-grunt-tasks' )( grunt );
             styles: {
                 // Which files to watch (all .less files recursively in the less directory)
                 files: ['less/*.less'],
-                tasks: ['less:develop','autoprefixer:docs_file','shell:jekyllBuild'],
+                tasks: ['less:develop','autoprefixer:docs_file'],
                 options: {
                     nospawn: true,
                     atBegin:true
@@ -24,7 +24,7 @@ require( 'load-grunt-tasks' )( grunt );
                 'pages/**',
                 'index.html',
                 '404.html' ],
-                tasks : [ 'shell:jekyllBuild' ],
+                tasks : [ 'shell:jekyllBuild','less:develop','autoprefixer:docs_file'],
                 options : {
                     spawn : true,
                     interrupt : true,
@@ -35,7 +35,7 @@ require( 'load-grunt-tasks' )( grunt );
         },
         clean: {
             docs: {
-                src: ['docs']
+                src: ['gh-pages']
             },
             dist: {
                 src: ['dist']
@@ -67,7 +67,7 @@ require( 'load-grunt-tasks' )( grunt );
                     sourceMap: true
                 },
                 files: {
-                    "css/main.css": "less/main.less"
+                    "gh-pages/css/main.css": "less/main.less"
                 }
             },
             deploy: {
@@ -92,8 +92,8 @@ require( 'load-grunt-tasks' )( grunt );
 
             // prefix the specified file
             docs_file: {
-              src: 'css/main.css',
-              dest: 'css/main.css'
+              src: 'gh-pages/css/main.css',
+              dest: 'gh-pages/css/main.css'
             },
             deploy_file: {
               src: 'dist/titatoggle-dist.css',
@@ -110,7 +110,7 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-autoprefixer');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['clean','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy','shell:jekyllBuild','clean:css']);
+    grunt.registerTask('deploy', ['clean','shell:jekyllBuild','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy']);
     grunt.registerTask('default', 'watch');
 
 };
