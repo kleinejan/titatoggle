@@ -117,7 +117,7 @@ require( 'load-grunt-tasks' )( grunt );
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-gh-pages');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['clean','shell:jekyllBuild','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy']);
+    grunt.registerTask('deploy', ['clean','shell:jekyllBuild','less:develop','less:deploy','less:deployMin','autoprefixer','copy:deploy','gh-pages']);
     grunt.registerTask('default', 'watch');
 
 };
