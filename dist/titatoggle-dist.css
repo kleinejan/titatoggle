@@ -1231,3 +1231,24 @@ Variations
 .checkbox-slider-danger.checkbox-slider--c-weight input:checked + span:before {
   background: #d9534f;
 }
+/*******************************************************
+Labal Text based on Checkbox Status
+*******************************************************/
+.checkbox input ~ .checkbox-slider-label:after {
+  content: attr(data-not-checked);
+}
+.checkbox input:checked ~ .checkbox-slider-label:after {
+  content: attr(data-checked);
+}
+.checkbox input + span > .checkbox-slider-not-checked {
+  display: inline;
+}
+.checkbox input:checked + span > .checkbox-slider-not-checked {
+  display: none;
+}
+.checkbox input + span > .checkbox-slider-checked {
+  display: none;
+}
+.checkbox input:checked + span > .checkbox-slider-checked {
+  display: inline;
+}
