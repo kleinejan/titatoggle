@@ -147,14 +147,14 @@ Slider default
 
 	input + span:after {
 		background:@white;
-		border:solid transparent 2px;
+		border:solid transparent 1px;
 		background-clip:content-box;
 	}
 
 	input:checked + span:after {
 
 		background:@brand-success;
-		border:solid transparent 2px;
+		border:solid transparent 1px;
 		background-clip:content-box;
 	}
 
@@ -684,6 +684,7 @@ Variations
 	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-info;
+            background-clip:content-box;
 		}
 	}
 	&.checkbox-slider--c,
@@ -710,6 +711,7 @@ Variations
 	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-warning;
+            background-clip:content-box;
 		}
 	}
 	&.checkbox-slider--c,
@@ -736,6 +738,7 @@ Variations
 	&.checkbox-slider--c-weight {
 		input:checked + span:after {
 			background:@brand-danger;
+            background-clip:content-box;
 		}
 	}
 	&.checkbox-slider--c,

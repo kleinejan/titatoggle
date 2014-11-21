@@ -342,12 +342,12 @@ Slider default
 }
 .checkbox-slider--default input + span:after {
   background: #ffffff;
-  border: solid transparent 2px;
+  border: solid transparent 1px;
   background-clip: content-box;
 }
 .checkbox-slider--default input:checked + span:after {
   background: #5cb85c;
-  border: solid transparent 2px;
+  border: solid transparent 1px;
   background-clip: content-box;
 }
 /*******************************************************
@@ -421,12 +421,12 @@ Slider default rounded
 }
 .checkbox-slider--a-rounded input + span:after {
   background: #ffffff;
-  border: solid transparent 2px;
+  border: solid transparent 1px;
   background-clip: content-box;
 }
 .checkbox-slider--a-rounded input:checked + span:after {
   background: #5cb85c;
-  border: solid transparent 2px;
+  border: solid transparent 1px;
   background-clip: content-box;
 }
 .checkbox-slider--a-rounded input + span:after,
@@ -1185,6 +1185,7 @@ Variations
 .checkbox-slider-info.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--c-weight input:checked + span:after {
   background: #5bc0de;
+  background-clip: content-box;
 }
 .checkbox-slider-info.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--c-weight input:checked + span:after {
@@ -1201,6 +1202,7 @@ Variations
 .checkbox-slider-warning.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-warning.checkbox-slider--c-weight input:checked + span:after {
   background: #f0ad4e;
+  background-clip: content-box;
 }
 .checkbox-slider-warning.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-warning.checkbox-slider--c-weight input:checked + span:after {
@@ -1217,6 +1219,7 @@ Variations
 .checkbox-slider-danger.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-danger.checkbox-slider--c-weight input:checked + span:after {
   background: #d9534f;
+  background-clip: content-box;
 }
 .checkbox-slider-danger.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-danger.checkbox-slider--c-weight input:checked + span:after {
