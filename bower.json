@@ -1,6 +1,6 @@
 {
   "name": "titatoggle",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "homepage": "https://github.com/kleinejan/titatoggle",
   "authors": [
     "Jan Enning <enning@kleinejan.org>"
@@ -38,7 +38,7 @@
     "buttons",
     "toggle"
   ],
-  "license": "MIT",
+  "license": "GNU GENERAL PUBLIC LICENSE V2.0",
   "dependencies": {
     "bootstrap": "~3.2.0"
   }
