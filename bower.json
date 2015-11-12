@@ -38,7 +38,7 @@
     "buttons",
     "toggle"
   ],
-  "license": "MIT",
+  "license": "GNU GENERAL PUBLIC LICENSE V2.0",
   "dependencies": {
     "bootstrap": "~3.2.0"
   }
