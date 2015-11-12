@@ -6,6 +6,12 @@ The Pattern is the same as Twitter-Bootstrap. So it can be implemented without a
 
 Browser support: Internet Explorer 9, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android 
 
+Install:
+'''
+$ bower install titatoggle
+'''
+
+GNU General Public License v2.0
 
 ```html
 <div class="checkbox checkbox-slider--X">
