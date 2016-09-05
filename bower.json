@@ -40,6 +40,6 @@
   ],
   "license": "GNU GENERAL PUBLIC LICENSE V2.0",
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.3.0"
   }
 }
