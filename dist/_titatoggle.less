@@ -136,6 +136,21 @@ Main Slider
 
 }
 
+/**
+ * Fix an an issue with ".form-horizontal" forms use titatoggle.
+ *
+ * @see https://github.com/kleinejan/titatoggle/issues/5
+ */
+.form-horizontal {
+	.checkbox.checkbox-slider {
+		input + span {
+			&:after {
+				top: 7px;
+			}
+		}
+	}
+}
+
 
 /*******************************************************
 Slider default
