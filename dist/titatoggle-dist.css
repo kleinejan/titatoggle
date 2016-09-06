@@ -202,6 +202,9 @@ Main Slider basics
 .checkbox-toggle input + span > h4 {
   display: inline;
 }
+.form-horizontal [class^='checkbox'] input + span:after {
+  top: 7px;
+}
 /*******************************************************
 Main Slider
 *******************************************************/
@@ -928,6 +931,15 @@ Slider C Sizes
 .checkbox-slider--c.checkbox-slider-lg input + span:after {
   width: 40px;
   border-radius: 40px;
+}
+.form-horizontal [class*='checkbox-slider--c'].checkbox-slider-sm input + span:before {
+  top: 10px;
+}
+.form-horizontal [class*='checkbox-slider--c'].checkbox-slider-md input + span:before {
+  top: 20px;
+}
+.form-horizontal [class*='checkbox-slider--c'].checkbox-slider-lg input + span:before {
+  top: 25px;
 }
 /*******************************************************
 Slider C-weight
