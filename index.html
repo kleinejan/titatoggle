@@ -1,19 +1,63 @@
----
-layout: default
-title: titatoggle
----
-{% include intro.html %}
-<div class="container">
-	{% include slider-intro.html %}
-	{% include slider--default.html %}
-	{% include slider--default-rounded.html %}
-	{% include slider--a.html %}
-	{% include slider--b.html %}
-	{% include slider--b-flat.html %}
-	{% include slider--c.html %}
-	{% include slider--c-weight.html %}
-	{% include sizes.html %}
-	{% include indicator.html %}
-	{% include variations.html %}
-	{% include howto.html %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ti-Ta-Toggle - Bootstrap awesome toggle buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap Toggle plugin">
+    <meta name="author" content="Jan Enning">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <a href="https://github.com/kleinejan/titatoggle"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#default">Default</a></li>
+                    <li><a href="#a">Slider A</a></li>
+                    <li><a href="#b">Slider B</a></li>
+                    <li><a href="#c">Slider C</a></li>
+                    <li><a href="#sizes">Sizes</a></li>
+                    <li><a href="#indicator">Indicator</a></li>
+                    <li><a href="#variations">Variations</a></li>
+                    <li><a href="#howto">Howto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	@@include('_includes/intro.html')
+	<div class="container">
+		@@include('_includes/slider-intro.html')
+		@@include('_includes/slider--default.html')
+		@@include('_includes/slider--default-rounded.html')
+		@@include('_includes/slider--a.html')
+		@@include('_includes/slider--b.html')
+		@@include('_includes/slider--b-flat.html')
+		@@include('_includes/slider--c.html')
+		@@include('_includes/slider--c-weight.html')
+		@@include('_includes/sizes.html')
+		@@include('_includes/indicator.html')
+		@@include('_includes/variations.html')
+		@@include('_includes/howto.html')
+	</div>
+
+    <footer>
+        <a href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
+    </footer>
+</body>
+</html>
+

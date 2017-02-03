@@ -85,18 +85,14 @@ Main Slider basics
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-toggle input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-toggle input + span:before {
   position: absolute;
@@ -126,18 +122,14 @@ Main Slider
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider input + span:before {
   position: absolute;
@@ -165,7 +157,7 @@ Main Slider
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -195,18 +187,14 @@ Slider default
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--default input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--default input + span:before {
   position: absolute;
@@ -234,7 +222,7 @@ Slider default
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -248,7 +236,7 @@ Slider default
   transition: background 0.2s ease-in;
 }
 .checkbox-slider--default input + span:after {
-  background: #ffffff;
+  background: #FFF;
   border: solid transparent 1px;
   background-clip: content-box;
 }
@@ -274,18 +262,14 @@ Slider default rounded
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--a-rounded input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--a-rounded input + span:before {
   position: absolute;
@@ -313,7 +297,7 @@ Slider default rounded
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -327,7 +311,7 @@ Slider default rounded
   transition: background 0.2s ease-in;
 }
 .checkbox-slider--a-rounded input + span:after {
-  background: #ffffff;
+  background: #FFF;
   border: solid transparent 1px;
   background-clip: content-box;
 }
@@ -377,18 +361,14 @@ Slider A
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--a input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--a input + span:before {
   position: absolute;
@@ -416,7 +396,7 @@ Slider A
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -439,14 +419,14 @@ Slider A
 .checkbox-slider--a input + span:after {
   width: 40px;
   font-size: 10px;
-  color: #000000;
+  color: #000;
   content: "Off";
   border: solid transparent 1px;
   background-clip: content-box;
 }
 .checkbox-slider--a input:checked + span:after {
   content: "On";
-  color: #ffffff;
+  color: #fff;
   background: #5cb85c;
   border: solid transparent 1px;
   background-clip: content-box;
@@ -510,18 +490,14 @@ Slider B
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--b input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--b input + span:before {
   position: absolute;
@@ -549,7 +525,7 @@ Slider B
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -570,7 +546,7 @@ Slider B
   width: 40px;
 }
 .checkbox-slider--b input + span:after {
-  background: #ffffff;
+  background: #FFF;
   content: "";
   width: 20px;
   border: solid transparent 2px;
@@ -622,18 +598,14 @@ Slider B-flat
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--b-flat input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--b-flat input + span:before {
   position: absolute;
@@ -661,7 +633,7 @@ Slider B-flat
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -682,7 +654,7 @@ Slider B-flat
   width: 40px;
 }
 .checkbox-slider--b-flat input + span:after {
-  background: #ffffff;
+  background: #FFF;
   content: "";
   width: 20px;
   border: solid transparent 2px;
@@ -734,18 +706,14 @@ Slider C
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--c input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--c input + span:before {
   position: absolute;
@@ -773,7 +741,7 @@ Slider C
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -857,18 +825,14 @@ Slider C-weight
   height: 0%;
   margin: 0 0;
   cursor: pointer;
-  zoom: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .checkbox-slider--c-weight input + span {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-slider--c-weight input + span:before {
   position: absolute;
@@ -896,7 +860,7 @@ Slider C-weight
   left: 0px;
   top: 0;
   display: block;
-  background: #ffffff;
+  background: #FFF;
   transition: margin-left 0.1s ease-in-out;
   text-align: center;
   font-weight: bold;
@@ -975,7 +939,7 @@ State Disabled
 }
 .checkbox-slider--a input:disabled + span:after {
   background: #777777;
-  color: #ffffff;
+  color: #FFF;
 }
 .checkbox-slider--a input:disabled + span:before {
   box-shadow: 0 0 0 black;

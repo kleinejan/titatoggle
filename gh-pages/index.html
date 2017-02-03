@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>Ti-Ta-Toggle - Bootstrap awesome toggle buttons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Bootstrap Toggle plugin">
     <meta name="author" content="Jan Enning">
     <link href="css/main.css" rel="stylesheet">
+    <script src="js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -37,8 +39,7 @@
             </div>
         </div>
     </nav>
-
-    <div class="hero">
+	<div class="hero">
 	<div class="container">
 		<h1 class="text-center">Bootstrap 3 Ti-Ta-Toggle <small>(bs3 addon without JS)</small></h1>
 		<p class="text-center lead">
@@ -86,19 +87,17 @@
 		</div>
 		<hr>
 		<p class="text-center">
-		<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=watch&count=true&size=large"
-		allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-	<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=fork&count=true&size=large"
-	allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+		<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+	<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
 		</p>
 
 	</div>
 </div>
 
-<div class="container">
-	<h3 id="intro">Intro</h3>
+	<div class="container">
+		<h3 id="intro">Intro</h3>
 <p class="lead">
-	The only difference between default Bootstrap is the additional <code>span</code>. After that it's only a question of adding a class that fits your needs.
+	The only difference between default Bootstrap is the additional <code class="hljs"><span class="hljs-attribute">span</span></code>. After that it's only a question of adding a class that fits your needs.
 </p>
 
 <h4>Bootstrap 3</h4>
@@ -110,15 +109,17 @@
 		<input type="checkbox">default Bootstrap 3
 	</label>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;label&gt;</span>
-		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>default Bootstrap 3
-	<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<pre><code class="html hljs">
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox"</span>&gt;
+	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>default Bootstrap 3
+	<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</code></pre>
 
 <h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
 <p>
-	Just by adding one <code>&lt;span&gt;</code> plus the class <code>.checkbox-slider--TYPE</code> you get this result:
+	Just by adding one <code class="hljs">&amp;<span class="hljs-keyword">lt</span>;span&amp;<span class="hljs-keyword">gt</span>;</code> plus the class <code class="hljs">.checkbox-slider<span class="hljs-comment">--TYPE</span></code> you get this result:
 </p>
 
 	<!-- <div class="panel-heading">
@@ -132,25 +133,27 @@
 	</div>
 
 
-		<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox-slider--default&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;label&gt;</span>
-		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;&lt;span&gt;</span>TiTaToggle<span class="nt">&lt;/span&gt;</span>
-	<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+		<pre><code class="html hljs">
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox checkbox-slider--default"</span>&gt;
+	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>TiTaToggle<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+		</code></pre>
 
 
 
 <div class="alert alert-danger">
 	<p>
-		<h4>Note:</h4>
+		</p><h4>Note:</h4>
 		<p>
-			Don't forget to add the <code>span</code> after the <code>input</code>
+			Don't forget to add the <code class="hljs"><span class="hljs-attribute">span</span></code> after the <code class="hljs"><span class="hljs-attribute">input</span></code>
 		</p>
-	</p>
+	<p></p>
 </div>
 <hr>
 
-	<h3 id="default">Slider default <small>checkbox-slider--default</small></h3>
+		<h3 id="default">Slider default <small>checkbox-slider--default</small></h3>
 <p>
 	Out of the box this would be the modest version, without any bells and whistles.
 </p>
@@ -223,11 +226,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--default&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--default"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h4 id="b">Slider Default rounded <small>checkbox-slider--a-rounded</small></h4>
+		<h4 id="b">Slider Default rounded <small>checkbox-slider--a-rounded</small></h4>
 <p>
 	It takes the edge off.
 </p>
@@ -300,11 +305,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--a-rounded&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--a-rounded"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h3 id="a">Slider A <small>checkbox-slider--a</small></h3>
+		<h3 id="a">Slider A <small>checkbox-slider--a</small></h3>
 <p>
 	Sometimes you need some text to double the meaning / state of the checkbox.
 	I've noticed many people have trouble with a checkbox, when it's "On" of "Off". To make
@@ -376,11 +383,13 @@
 	</div>
 </div>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--a&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--a"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h3 id="b">Slider B <small>checkbox-slider--b</small></h3>
+		<h3 id="b">Slider B <small>checkbox-slider--b</small></h3>
 <p>
 	An iOS like version of just a plain checkbox.
 </p>
@@ -453,11 +462,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--b&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--b"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h4 id="b">Slider B Flat <small>checkbox-slider--b-flat</small></h4>
+		<h4 id="b">Slider B Flat <small>checkbox-slider--b-flat</small></h4>
 <p>
 	Just flat, it seems to be very fashionable. We just wait until the bevel is back.
 </p>
@@ -530,11 +541,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--b-flat&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--b-flat"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h3 id="c">Slider C <small>checkbox-slider--c</small></h3>
+		<h3 id="c">Slider C <small>checkbox-slider--c</small></h3>
 <p>
 	Inspired by the Google material toggle boxes. And again this is just plain Bootstrap 3.
 </p>
@@ -606,11 +619,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--c&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--c"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h4 id="c">Slider C Weight <small>checkbox-slider--c-weight</small></h4>
+		<h4 id="c">Slider C Weight <small>checkbox-slider--c-weight</small></h4>
 <p>
 	Giving the slider some more weight.
 </p>
@@ -682,11 +697,13 @@
 
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider--c-weight&quot;</span><span class="nt">&gt;</span>
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--c-weight"</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
 
-	<h3 id="sizes">Sizes</h3>
+		<h3 id="sizes">Sizes</h3>
 <p class="lead">
 	Propper sizing option should get the pony over the hill for your next project.
 </p>
@@ -698,7 +715,7 @@
 		<li>checkbox-slider-md</li>
 		<li>checkbox-slider-lg</li>
 	</ul>
-	Just like Bootstrap. In the case you need something special, use the <code>_titatoggle.less</code>
+	Just like Bootstrap. In the case you need something special, use the <code class="hljs">_titatoggle.<span class="hljs-keyword">less</span></code>
 	to alther your preferend settings and sizes.
 </p>
 
@@ -738,23 +755,26 @@
 </div>
 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider-sm ...&quot;</span><span class="nt">&gt;</span>
-	...
-<span class="nt">&lt;/div&gt;</span>
+<pre><code class="html hljs">
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... &lt;DEFAULT&gt; ...&quot;</span><span class="nt">&gt;</span>
+<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-sm ..."</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span>
+&lt;/<span class="hljs-keyword">div</span>&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider-md ...&quot;</span><span class="nt">&gt;</span>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... &lt;DEFAULT&gt; ..."</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span>
+&lt;/<span class="hljs-keyword">div</span>&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;... checkbox-slider-lg ...&quot;</span><span class="nt">&gt;</span>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-md ..."</span>&gt;
 	...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
 
-	<h3 id="indicator">Indicator</h3>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-lg ..."</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</span></code></pre>
+
+		<h3 id="indicator">Indicator</h3>
 <p class="lead">
 	Small visual que for the label to show that the checkbox is checked.
 </p>
@@ -783,38 +803,41 @@
 	</label>
 </div>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ...&quot;</span><span class="nt">&gt;</span>
-...
-	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;indicator-success&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span>
-...
-<span class="nt">&lt;/div&gt;</span>
+<pre><code class="html hljs">
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ...&quot;</span><span class="nt">&gt;</span>
+<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
 ...
-	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;indicator-info&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span>
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-success"</span>&gt;danger&lt;/span&gt;
 ...
-<span class="nt">&lt;/div&gt;</span>
+&lt;/<span class="hljs-keyword">div</span>&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ...&quot;</span><span class="nt">&gt;</span>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
 ...
-	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;indicator-warning&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span>
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-info"</span>&gt;danger&lt;/span&gt;
 ...
-<span class="nt">&lt;/div&gt;</span>
+&lt;/<span class="hljs-keyword">div</span>&gt;
 
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ...&quot;</span><span class="nt">&gt;</span>
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
 ...
-	<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;indicator-danger&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/span&gt;</span>
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-warning"</span>&gt;danger&lt;/span&gt;
 ...
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+...
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-danger"</span>&gt;danger&lt;/span&gt;
+...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</span></code></pre>
 
 <hr>
 
-	<h3 id="variations">Variations</h3>
+		<h3 id="variations">Variations</h3>
 <p class="lead">
 	Checkboxes can have different colors, just like buttons.
 </p>
 <p>
-	We use the default Bootstrap variables <code>@brand-XXX</code> to color the checkbox.
+	We use the default Bootstrap variables <code class="hljs">@<span class="hljs-keyword">brand</span>-<span class="hljs-keyword">XXX</span></code> to color the checkbox.
 </p>
 <div class="alert alert-warning">
 	Not so usable for the visually impaired, due
@@ -958,11 +981,14 @@
 
 </div>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ... checkbox-slider-info&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ... checkbox-slider-danger&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox ... checkbox-slider-warning&quot;</span><span class="nt">&gt;</span></code></pre></div>
+{%highlight html%}
+<div class="checkbox ... checkbox-slider-info">
+<div class="checkbox ... checkbox-slider-danger">
+<div class="checkbox ... checkbox-slider-warning">
 
-	<h3 id="howto">Howto</h3>
+{%endhighlight%}
+
+		<h3 id="howto">Howto</h3>
 <p class="lead">
 	Okay and now what?
 </p>
@@ -973,27 +999,30 @@
 
 <h4>Bower</h4>
 <p>
-	<code>$ bower install titatoggle</code>
+	<code class="hljs">$ <span class="hljs-keyword">bower </span><span class="hljs-keyword">install </span>titatoggle</code>
 </p>
 
 <h4>Less</h4>
 <p>
-	Inside the project you will find <code>_titatoggle.less</code> Include this file into your own project, and stuff just works.
+	Inside the project you will find <code class="hljs">_titatoggle.<span class="hljs-keyword">less</span></code> Include this file into your own project, and stuff just works.
 	If needed, you can fiddle around with some less variables.
 </p>
 
 <h4>CSS</h4>
 <p>
-	There is alway the option to include only the <code>titatoggle-dist.css</code>. Keep in mind this thing is build on top off Bootstrap 3.
-	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/titatoggle-dist.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span></code></pre></div>
+	There is alway the option to include only the <code class="hljs"><span class="hljs-selector-tag">titatoggle-dist</span><span class="hljs-selector-class">.css</span></code>. Keep in mind this thing is build on top off Bootstrap 3.
+	<pre><code class="html hljs">
+	<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"css/titatoggle-dist.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+	</code></pre>
 </p>
 
 <h4>License</h4>
 <p><strong>GNU General Public License v2.0</strong></p>
-</div>
+	</div>
 
     <footer>
         <a href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
     </footer>
-</body>
+</div></div></div></body>
 </html>
+
