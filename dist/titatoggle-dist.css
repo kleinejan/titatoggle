@@ -4,163 +4,67 @@ Variables
 /*******************************************************
 Animation
 *******************************************************/
-@-webkit-keyframes popIn {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  25% {
-    -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.4, 1);
-            transform: scale(1.4, 1);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
 @keyframes popIn {
   0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   25% {
-    -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
+    transform: scale(1.2, 1);
   }
   50% {
-    -webkit-transform: scale(1.4, 1);
-            transform: scale(1.4, 1);
+    transform: scale(1.4, 1);
   }
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes popOut {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  25% {
-    -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
-  }
-  50% {
-    -webkit-transform: scale(1.4, 1);
-            transform: scale(1.4, 1);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
 @keyframes popOut {
   0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    transform: scale(1, 1);
   }
   25% {
-    -webkit-transform: scale(1.2, 1);
-            transform: scale(1.2, 1);
+    transform: scale(1.2, 1);
   }
   50% {
-    -webkit-transform: scale(1.4, 1);
-            transform: scale(1.4, 1);
+    transform: scale(1.4, 1);
   }
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes splashIn {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 0.8;
-  }
-  50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: .9;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
+    transform: scale(1, 1);
   }
 }
 @keyframes splashIn {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
     opacity: 0.8;
   }
   50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
     opacity: .9;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes splashOut {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  25% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: .9;
-  }
-  100% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes splashOut {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   25% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0.8;
   }
   50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: .9;
   }
   100% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
     opacity: 1;
   }
 }
@@ -170,7 +74,7 @@ Main Slider basics
 .checkbox-toggle {
   position: relative;
 }
-.checkbox-toggle input {
+.checkbox-toggle input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -211,7 +115,7 @@ Main Slider
 .checkbox-slider {
   position: relative;
 }
-.checkbox-slider input {
+.checkbox-slider input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -280,7 +184,7 @@ Slider default
 .checkbox-slider--default {
   position: relative;
 }
-.checkbox-slider--default input {
+.checkbox-slider--default input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -359,7 +263,7 @@ Slider default rounded
 .checkbox-slider--a-rounded {
   position: relative;
 }
-.checkbox-slider--a-rounded input {
+.checkbox-slider--a-rounded input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -462,7 +366,7 @@ Slider A
 .checkbox-slider--a {
   position: relative;
 }
-.checkbox-slider--a input {
+.checkbox-slider--a input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -595,7 +499,7 @@ Slider B
 .checkbox-slider--b {
   position: relative;
 }
-.checkbox-slider--b input {
+.checkbox-slider--b input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -674,16 +578,14 @@ Slider B
   border-radius: 20px;
 }
 .checkbox-slider--b input:not(:checked) + span:after {
-  -webkit-animation: popOut ease-in 0.3s normal;
-          animation: popOut ease-in 0.3s normal;
+  animation: popOut ease-in 0.3s normal;
 }
 .checkbox-slider--b input:checked + span:after {
   content: "";
   margin-left: 20px;
   border: solid transparent 2px;
   background-clip: padding-box;
-  -webkit-animation: popIn ease-in 0.3s normal;
-          animation: popIn ease-in 0.3s normal;
+  animation: popIn ease-in 0.3s normal;
 }
 .checkbox-slider--b input:checked + span:before {
   background: #5cb85c;
@@ -709,7 +611,7 @@ Slider B-flat
 .checkbox-slider--b-flat {
   position: relative;
 }
-.checkbox-slider--b-flat input {
+.checkbox-slider--b-flat input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -788,16 +690,14 @@ Slider B-flat
   border-radius: 20px;
 }
 .checkbox-slider--b-flat input:not(:checked) + span:after {
-  -webkit-animation: popOut ease-in 0.3s normal;
-          animation: popOut ease-in 0.3s normal;
+  animation: popOut ease-in 0.3s normal;
 }
 .checkbox-slider--b-flat input:checked + span:after {
   content: "";
   margin-left: 20px;
   border: solid transparent 2px;
   background-clip: padding-box;
-  -webkit-animation: popIn ease-in 0.3s normal;
-          animation: popIn ease-in 0.3s normal;
+  animation: popIn ease-in 0.3s normal;
 }
 .checkbox-slider--b-flat input:checked + span:before {
   background: #5cb85c;
@@ -823,7 +723,7 @@ Slider C
 .checkbox-slider--c {
   position: relative;
 }
-.checkbox-slider--c input {
+.checkbox-slider--c input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -906,8 +806,7 @@ Slider C
   background: #5cb85c;
   margin-left: 20px;
   border: solid #5cb85c 2px;
-  -webkit-animation: splashIn ease-in 0.3s normal;
-          animation: splashIn ease-in 0.3s normal;
+  animation: splashIn ease-in 0.3s normal;
 }
 .checkbox-slider--c input:checked + span:before {
   background: #5cb85c;
@@ -947,7 +846,7 @@ Slider C-weight
 .checkbox-slider--c-weight {
   position: relative;
 }
-.checkbox-slider--c-weight input {
+.checkbox-slider--c-weight input[type="checkbox"] {
   display: block;
   position: absolute;
   top: 0;
@@ -1030,8 +929,7 @@ Slider C-weight
   background: #5cb85c;
   margin-left: 20px;
   border: solid #5cb85c 2px;
-  -webkit-animation: splashIn ease-in 0.3s normal;
-          animation: splashIn ease-in 0.3s normal;
+  animation: splashIn ease-in 0.3s normal;
 }
 .checkbox-slider--c-weight input:checked + span:before {
   background: #5cb85c;
@@ -1060,8 +958,7 @@ Slider C-weight
   height: 2px !important;
 }
 .checkbox-slider--c-weight input:not(:checked) + span:after {
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
   left: -6px;
 }
 /******************************************************
