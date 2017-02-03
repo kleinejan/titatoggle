@@ -98,7 +98,7 @@ gulp.task('less', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence(['copy:js', 'copy:src', 'less', 'fileinclude', 'browser-sync'],
+    runSequence(['copy:js', 'copy:src', 'less', 'fileinclude'], 'browser-sync',
         callback
     )
 });
