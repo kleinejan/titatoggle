@@ -24,6 +24,10 @@
   ],
   "license": "GPLv2",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
+    "gh-pages": "^0.12.0",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.4",
     "grunt-contrib-clean": "~0.6.0",
@@ -37,7 +41,22 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-gh-pages": "^0.9.1",
     "grunt-shell": "~0.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-highlight": "^2.1.0",
+    "gulp-less": "^3.3.0",
+    "gulp-path": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-snippet-highlight": "^1.0.0",
+    "gulp-watch": "^4.3.11",
+    "highlight": "^0.2.4",
+    "highlight.js": "^9.9.0",
     "load-grunt-tasks": "^0.4.0",
+    "run-sequence": "^1.2.2",
     "time-grunt": "^0.3.1"
   }
 }

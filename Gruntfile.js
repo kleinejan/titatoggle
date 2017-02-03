@@ -72,7 +72,7 @@ require( 'load-grunt-tasks' )( grunt );
             },
             deploy: {
                 files: {
-                    "dist/titatoggle-dist.css": "less/slider.less"
+                    "dist/titatoggle-dist.css": "less/titatoggle.less"
                 }
             },
             deployMin: {
@@ -80,7 +80,7 @@ require( 'load-grunt-tasks' )( grunt );
                     cleancss: true
                 },
                 files: {
-                    "dist/titatoggle-dist-min.css": "less/slider.less"
+                    "dist/titatoggle-dist-min.css": "less/titatoggle.less"
                 }
             }
         },
