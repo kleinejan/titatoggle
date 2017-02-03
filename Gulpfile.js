@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     fileinclude = require('gulp-file-include'),
-    ghpages = require('gulp-gh-pages'),
     runSequence = require('run-sequence'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
@@ -22,7 +21,7 @@ gulp.task('fileinclude', function () {
             basepath: '@file'
         }))
         .pipe(highlight())
-        .pipe(gulp.dest('./gh-pages'));
+        .pipe(gulp.dest('./docs'));
 });
 
 
@@ -34,7 +33,7 @@ gulp.task('less:main', function () {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./gh-pages/css'))
+        .pipe(gulp.dest('./docs/css'))
         .pipe(browserSync.stream());
 });
 
@@ -70,24 +69,19 @@ gulp.task('copy:src', function () {
 
 gulp.task('copy:js', function () {
     return gulp.src('node_modules/highlight.js/lib/**/*.*')
-        .pipe(gulp.dest('./gh-pages/js'));
-});
-
-gulp.task('deploy', function () {
-    return gulp.src('./gh-pages/**/*')
-        .pipe(ghPages());
+        .pipe(gulp.dest('./docs/js'));
 });
 
 gulp.task('browser-sync', function () {
     browserSync.init({
         injectChanges: true,
         server: {
-            baseDir: "./gh-pages"
+            baseDir: "./docs"
         }
     });
     gulp.watch("less/**/*.*", ['less']);
     gulp.watch("_includes/**/*.*", ['fileinclude']);
-    gulp.watch("gh-pages/**/*.*").on("change", reload);
+    gulp.watch("docs/**/*.*").on("change", reload);
 
 });
 
@@ -99,12 +93,6 @@ gulp.task('less', function (callback) {
 
 gulp.task('default', function (callback) {
     runSequence(['copy:js', 'copy:src', 'less', 'fileinclude'], 'browser-sync',
-        callback
-    )
-});
-
-gulp.task('publish', function (callback) {
-    runSequence(['copy:js', 'copy:src', 'less', 'fileinclude'],
         callback
     )
 });
