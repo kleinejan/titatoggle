@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ti-Ta-Toggle - Bootstrap awesome toggle buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap Toggle plugin">
+    <meta name="author" content="Jan Enning">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+    <a href="https://github.com/kleinejan/titatoggle"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#default">Default</a></li>
+                    <li><a href="#a">Slider A</a></li>
+                    <li><a href="#b">Slider B</a></li>
+                    <li><a href="#c">Slider C</a></li>
+                    <li><a href="#sizes">Sizes</a></li>
+                    <li><a href="#indicator">Indicator</a></li>
+                    <li><a href="#variations">Variations</a></li>
+                    <li><a href="#howto">Howto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div class="hero">
+	<div class="container">
+		<h1 class="text-center">Bootstrap 3 Ti-Ta-Toggle <small>(bs3 addon without JS)</small></h1>
+		<p class="text-center lead">
+			Using awesome toggle buttons without Javascript or any other logic, other than plane form elements.
+			The Pattern is the same as Twitter-Bootstrap. So it can be implemented without a breeze.
+		</p>
+		<p class="text-center">
+			<em>Browser support: Internet Explorer 9, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android</em>
+		</p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<h5>Default checkbox</h5>
+					<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+						<label>
+							<input type="checkbox"><span>Check</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<h5>With text</h5>
+					<div class="checkbox checkbox-slider--a checkbox-slider-lg">
+						<label>
+							<input type="checkbox"><span>This</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<h5>iOS like</h5>
+					<div class="checkbox checkbox-slider--b checkbox-slider-lg">
+						<label>
+							<input type="checkbox"><span>Out</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<h5>Material like</h5>
+					<div class="checkbox checkbox-slider--c checkbox-slider-lg">
+						<label>
+							<input type="checkbox"><span>Dude</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<p class="text-center">
+		<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+	<iframe src="http://ghbtns.com/github-btn.html?user=kleinejan&repo=titatoggle&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+		</p>
+
+	</div>
+</div>
+
+	<div class="container">
+		<h3 id="intro">Intro</h3>
+<p class="lead">
+	The only difference between default Bootstrap is the additional <code class="hljs"><span class="hljs-attribute">span</span></code>. After that it's only a question of adding a class that fits your needs.
+</p>
+
+<h4>Bootstrap 3</h4>
+<p>
+	The <a href="http://getbootstrap.com/">Bootstrap 3</a> default way of generating checkbox looks a like this:
+</p>
+<div class="checkbox">
+	<label>
+		<input type="checkbox">default Bootstrap 3
+	</label>
+</div>
+<pre><code class="html hljs">
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox"</span>&gt;
+	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>default Bootstrap 3
+	<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</code></pre>
+
+<h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
+<p>
+	Just by adding one <code class="hljs">&amp;<span class="hljs-keyword">lt</span>;span&amp;<span class="hljs-keyword">gt</span>;</code> plus the class <code class="hljs">.checkbox-slider<span class="hljs-comment">--TYPE</span></code> you get this result:
+</p>
+
+	<!-- <div class="panel-heading">
+	<h3 class="panel-title">examples</h3>
+</div> -->
+
+	<div class="checkbox checkbox-slider--default">
+		<label>
+			<input type="checkbox"><span>TiTaToggle</span>
+		</label>
+	</div>
+
+
+		<pre><code class="html hljs">
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox checkbox-slider--default"</span>&gt;
+	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>TiTaToggle<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+		</code></pre>
+
+
+
+<div class="alert alert-danger">
+	<p>
+		</p><h4>Note:</h4>
+		<p>
+			Don't forget to add the <code class="hljs"><span class="hljs-attribute">span</span></code> after the <code class="hljs"><span class="hljs-attribute">input</span></code>
+		</p>
+	<p></p>
+</div>
+<hr>
+
+		<h3 id="default">Slider default <small>checkbox-slider--default</small></h3>
+<p>
+	Out of the box this would be the modest version, without any bells and whistles.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--default">
+			<label>
+				<input type="checkbox"><span>default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--default">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--default">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked disabled><span>disabled checked</span>
+	</label>
+</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--default"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h4 id="b">Slider Default rounded <small>checkbox-slider--a-rounded</small></h4>
+<p>
+	It takes the edge off.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--a-rounded">
+			<label>
+				<input type="checkbox"><span>Default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded">
+			<label>
+				<input type="checkbox" disabled checked><span>disabled checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--a-rounded"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h3 id="a">Slider A <small>checkbox-slider--a</small></h3>
+<p>
+	Sometimes you need some text to double the meaning / state of the checkbox.
+	I've noticed many people have trouble with a checkbox, when it's "On" of "Off". To make
+	this more clear, you can use this version.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--a">
+			<label>
+				<input type="checkbox"><span>Slider a</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a">
+			<label>
+				<input type="checkbox" checked disabled><span>disabled checked </span>
+			</label>
+		</div>
+
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--a checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--a checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--a checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--a checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--a"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h3 id="b">Slider B <small>checkbox-slider--b</small></h3>
+<p>
+	An iOS like version of just a plain checkbox.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--b">
+			<label>
+				<input type="checkbox"><span>Default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b">
+			<label>
+				<input type="checkbox" disabled checked><span>disabled checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--b checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--b checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--b checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--b"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h4 id="b">Slider B Flat <small>checkbox-slider--b-flat</small></h4>
+<p>
+	Just flat, it seems to be very fashionable. We just wait until the bevel is back.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--b-flat">
+			<label>
+				<input type="checkbox"><span>Default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat">
+			<label>
+				<input type="checkbox" disabled checked><span>disabled checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--b-flat checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--b-flat"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h3 id="c">Slider C <small>checkbox-slider--c</small></h3>
+<p>
+	Inspired by the Google material toggle boxes. And again this is just plain Bootstrap 3.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--c">
+			<label>
+				<input type="checkbox"><span>Default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c">
+			<label>
+				<input type="checkbox" checked disabled><span>disabled checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--c checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--c checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--c checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--c"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h4 id="c">Slider C Weight <small>checkbox-slider--c-weight</small></h4>
+<p>
+	Giving the slider some more weight.
+</p>
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--c-weight">
+			<label>
+				<input type="checkbox"><span>Default</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight">
+			<label>
+				<input type="checkbox" disabled><span>disabled</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight">
+			<label>
+				<input type="checkbox" checked disabled><span>disabled checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>small</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-sm">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>medium</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-md">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>large</span>
+			</label>
+		</div>
+		<div class="checkbox checkbox-slider--c-weight checkbox-slider-lg">
+			<label>
+				<input type="checkbox" checked><span>checked</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+
+
+<pre><code class="html hljs">
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider--c-weight"</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+
+		<h3 id="sizes">Sizes</h3>
+<p class="lead">
+	Propper sizing option should get the pony over the hill for your next project.
+</p>
+<p>
+
+	Next to the default size there are 3 sizes:
+	<ul>
+		<li>checkbox-slider-sm</li>
+		<li>checkbox-slider-md</li>
+		<li>checkbox-slider-lg</li>
+	</ul>
+	Just like Bootstrap. In the case you need something special, use the <code class="hljs">_titatoggle.<span class="hljs-keyword">less</span></code>
+	to alther your preferend settings and sizes.
+</p>
+
+<div class="row">
+	<div class="col-sm-3">
+		<h5>Default</h5>
+		<div class="checkbox checkbox-slider--default">
+			<label>
+				<input type="checkbox"><span>Check me</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Small</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+			<label>
+				<input type="checkbox"><span>Check me</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Medium</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+			<label>
+				<input type="checkbox"><span>Check me</span>
+			</label>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<h5>Large</h5>
+		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+			<label>
+				<input type="checkbox"><span>Check me</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+<pre><code class="html hljs">
+
+<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-sm ..."</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... &lt;DEFAULT&gt; ..."</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-md ..."</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"... checkbox-slider-lg ..."</span>&gt;
+	...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</span></code></pre>
+
+		<h3 id="indicator">Indicator</h3>
+<p class="lead">
+	Small visual que for the label to show that the checkbox is checked.
+</p>
+<div class="alert alert-warning">
+	Not so usable for the visually impaired, due
+	to the fact it's only a color and contrast is to low.
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-success">success</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-info">info</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-warning">warning</span>
+	</label>
+</div>
+<div class="checkbox checkbox-slider--default">
+	<label>
+		<input type="checkbox" checked><span class="indicator-danger">danger</span>
+	</label>
+</div>
+
+<pre><code class="html hljs">
+
+<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+...
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-success"</span>&gt;danger&lt;/span&gt;
+...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+...
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-info"</span>&gt;danger&lt;/span&gt;
+...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+...
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-warning"</span>&gt;danger&lt;/span&gt;
+...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+...
+	&lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-danger"</span>&gt;danger&lt;/span&gt;
+...
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</span></code></pre>
+
+<hr>
+
+		<h3 id="variations">Variations</h3>
+<p class="lead">
+	Checkboxes can have different colors, just like buttons.
+</p>
+<p>
+	We use the default Bootstrap variables <code class="hljs">@<span class="hljs-keyword">brand</span>-<span class="hljs-keyword">XXX</span></code> to color the checkbox.
+</p>
+<div class="alert alert-warning">
+	Not so usable for the visually impaired, due
+	to the fact it's only a color and contrast is to low. And keep in mind that colorblindness is a real fact.
+</div>
+<div class="col-md-3">
+	<h5>Default</h5>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--default">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--a">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+
+</div>
+
+<div class="col-md-3">
+	<h5>Info</h5>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b  checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat  checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-info">
+		<label>
+			<input type="checkbox" checked><span>info</span>
+		</label>
+	</div>
+
+</div>
+<div class="col-md-3">
+	<h5>Danger</h5>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-danger">
+		<label>
+			<input type="checkbox" checked><span>danger</span>
+		</label>
+	</div>
+
+</div>
+<div class="col-md-3">
+	<h5>Warning</h5>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-warning">
+		<label>
+			<input type="checkbox" checked><span>warning</span>
+		</label>
+	</div>
+
+</div>
+
+{%highlight html%}
+<div class="checkbox ... checkbox-slider-info">
+<div class="checkbox ... checkbox-slider-danger">
+<div class="checkbox ... checkbox-slider-warning">
+
+{%endhighlight%}
+
+		<h3 id="howto">Howto</h3>
+<p class="lead">
+	Okay and now what?
+</p>
+
+<p>
+	You have a few options to include this into your project.
+</p>
+
+<h4>Bower</h4>
+<p>
+	<code class="hljs">$ <span class="hljs-keyword">bower </span><span class="hljs-keyword">install </span>titatoggle</code>
+</p>
+
+<h4>Less</h4>
+<p>
+	Inside the project you will find <code class="hljs">_titatoggle.<span class="hljs-keyword">less</span></code> Include this file into your own project, and stuff just works.
+	If needed, you can fiddle around with some less variables.
+</p>
+
+<h4>CSS</h4>
+<p>
+	There is alway the option to include only the <code class="hljs"><span class="hljs-selector-tag">titatoggle-dist</span><span class="hljs-selector-class">.css</span></code>. Keep in mind this thing is build on top off Bootstrap 3.
+	<pre><code class="html hljs">
+	<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"css/titatoggle-dist.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+	</code></pre>
+</p>
+
+<h4>License</h4>
+<p><strong>GNU General Public License v2.0</strong></p>
+	</div>
+
+    <footer>
+        <a href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
+    </footer>
+</div></div></div></body>
+</html>
+
