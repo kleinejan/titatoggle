@@ -4779,6 +4779,7 @@ Variations
 *******************************************************/
 .checkbox-slider-info.checkbox-slider--default input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--a input:checked + span:after,
+.checkbox-slider-info.checkbox-slider--a-rounded input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--c-weight input:checked + span:after {
   background: #5bc0de;
@@ -4796,6 +4797,7 @@ Variations
 }
 .checkbox-slider-warning.checkbox-slider--default input:checked + span:after,
 .checkbox-slider-warning.checkbox-slider--a input:checked + span:after,
+.checkbox-slider-warning.checkbox-slider--a-rounded input:checked + span:after,
 .checkbox-slider-warning.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-warning.checkbox-slider--c-weight input:checked + span:after {
   background: #f0ad4e;
@@ -4813,6 +4815,7 @@ Variations
 }
 .checkbox-slider-danger.checkbox-slider--default input:checked + span:after,
 .checkbox-slider-danger.checkbox-slider--a input:checked + span:after,
+.checkbox-slider-danger.checkbox-slider--a-rounded input:checked + span:after,
 .checkbox-slider-danger.checkbox-slider--c input:checked + span:after,
 .checkbox-slider-danger.checkbox-slider--c-weight input:checked + span:after {
   background: #d9534f;
