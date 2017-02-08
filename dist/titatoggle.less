@@ -67,6 +67,12 @@ Main Slider basics
     margin: 0 0;
     cursor: pointer;
     opacity: 0;
+    
+    
+    &:focus + *:before
+    {
+      outline:solid @input-border-focus 2px;
+    }
   }
     
   input + span {

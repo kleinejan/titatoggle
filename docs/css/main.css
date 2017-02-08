@@ -3811,6 +3811,9 @@ Main Slider basics
   cursor: pointer;
   opacity: 0;
 }
+.checkbox-toggle input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
+}
 .checkbox-toggle input + span {
   cursor: pointer;
   -webkit-user-select: none;
@@ -3847,6 +3850,9 @@ Main Slider
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider input + span {
   cursor: pointer;
@@ -3912,6 +3918,9 @@ Slider default
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider--default input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider--default input + span {
   cursor: pointer;
@@ -3987,6 +3996,9 @@ Slider default rounded
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider--a-rounded input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider--a-rounded input + span {
   cursor: pointer;
@@ -4086,6 +4098,9 @@ Slider A
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider--a input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider--a input + span {
   cursor: pointer;
@@ -4216,6 +4231,9 @@ Slider B
   cursor: pointer;
   opacity: 0;
 }
+.checkbox-slider--b input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
+}
 .checkbox-slider--b input + span {
   cursor: pointer;
   -webkit-user-select: none;
@@ -4324,6 +4342,9 @@ Slider B-flat
   cursor: pointer;
   opacity: 0;
 }
+.checkbox-slider--b-flat input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
+}
 .checkbox-slider--b-flat input + span {
   cursor: pointer;
   -webkit-user-select: none;
@@ -4431,6 +4452,9 @@ Slider C
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider--c input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider--c input + span {
   cursor: pointer;
@@ -4550,6 +4574,9 @@ Slider C-weight
   margin: 0 0;
   cursor: pointer;
   opacity: 0;
+}
+.checkbox-slider--c-weight input[type="checkbox"]:focus + *:before {
+  outline: solid #66afe9 2px;
 }
 .checkbox-slider--c-weight input + span {
   cursor: pointer;
