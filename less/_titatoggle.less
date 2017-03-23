@@ -592,6 +592,9 @@ State Disabled
 /*******************************************************
 Indicators
 *******************************************************/
+input:checked + .indicator-primary {
+  color: @brand-primary;
+}
 
 input:checked + .indicator-success {
   color: @brand-success;
@@ -699,6 +702,34 @@ Sizes
 /*******************************************************
 Variations
 *******************************************************/
+// primary
+.checkbox-slider-primary {
+  &.checkbox-slider--default,
+  &.checkbox-slider--a,
+  &.checkbox-slider--a-rounded,
+  &.checkbox-slider--c,
+  &.checkbox-slider--c-weight {
+    input:checked + span:after {
+      background: @brand-primary;
+      background-clip: content-box;
+    }
+  }
+  &.checkbox-slider--c,
+  &.checkbox-slider--c-weight {
+    input:checked + span:after {
+      border-color: @brand-primary;
+    }
+  }
+
+  &.checkbox-slider--b,
+  &.checkbox-slider--b-flat,
+  &.checkbox-slider--c,
+  &.checkbox-slider--c-weight {
+    input:checked + span:before {
+      background: @brand-primary;
+    }
+  }
+}
 
 // info
 .checkbox-slider-info {
