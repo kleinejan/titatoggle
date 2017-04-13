@@ -4688,41 +4688,58 @@ State Disabled
 .checkbox-slider--default input:disabled + span {
   color: #777777;
 }
+.checkbox-slider--a-rounded input:disabled + span:after,
 .checkbox-slider--a input:disabled + span:after {
   background: #777777;
   color: #FFF;
 }
+.checkbox-slider--a-rounded input:disabled + span:before,
 .checkbox-slider--a input:disabled + span:before {
   box-shadow: 0 0 0 black;
 }
+.checkbox-slider--a-rounded input:disabled + span,
 .checkbox-slider--a input:disabled + span {
   color: #777777;
 }
+.checkbox-slider--b-flat input:disabled + span:after,
 .checkbox-slider--b input:disabled + span:after {
   border: solid transparent 2px;
   border-radius: 40px;
 }
+.checkbox-slider--b-flat input:disabled + span:before,
 .checkbox-slider--b input:disabled + span:before {
   box-shadow: 0 0 0 black;
 }
+.checkbox-slider--b-flat input:disabled + span,
 .checkbox-slider--b input:disabled + span {
   color: #777777;
 }
+.checkbox-slider--b-flat input:disabled:checked + span:before,
+.checkbox-slider--b input:disabled:checked + span:before {
+  background: #777777;
+}
+.checkbox-slider--c-weight input:disabled:checked + span:after,
 .checkbox-slider--c input:disabled:checked + span:after {
   background: #777777;
 }
+.checkbox-slider--c-weight input:disabled + span:after,
 .checkbox-slider--c input:disabled + span:after {
   border-color: #777777;
 }
+.checkbox-slider--c-weight input:disabled + span:before,
 .checkbox-slider--c input:disabled + span:before {
   background: #777777;
 }
+.checkbox-slider--c-weight input:disabled + span,
 .checkbox-slider--c input:disabled + span {
   color: #777777;
 }
 /*******************************************************
 Indicators
 *******************************************************/
+input:checked + .indicator-primary {
+  color: #337ab7;
+}
 input:checked + .indicator-success {
   color: #5cb85c;
 }
@@ -4804,6 +4821,24 @@ Sizes
 /*******************************************************
 Variations
 *******************************************************/
+.checkbox-slider-primary.checkbox-slider--default input:checked + span:after,
+.checkbox-slider-primary.checkbox-slider--a input:checked + span:after,
+.checkbox-slider-primary.checkbox-slider--a-rounded input:checked + span:after,
+.checkbox-slider-primary.checkbox-slider--c input:checked + span:after,
+.checkbox-slider-primary.checkbox-slider--c-weight input:checked + span:after {
+  background: #337ab7;
+  background-clip: content-box;
+}
+.checkbox-slider-primary.checkbox-slider--c input:checked + span:after,
+.checkbox-slider-primary.checkbox-slider--c-weight input:checked + span:after {
+  border-color: #337ab7;
+}
+.checkbox-slider-primary.checkbox-slider--b input:checked + span:before,
+.checkbox-slider-primary.checkbox-slider--b-flat input:checked + span:before,
+.checkbox-slider-primary.checkbox-slider--c input:checked + span:before,
+.checkbox-slider-primary.checkbox-slider--c-weight input:checked + span:before {
+  background: #337ab7;
+}
 .checkbox-slider-info.checkbox-slider--default input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--a input:checked + span:after,
 .checkbox-slider-info.checkbox-slider--a-rounded input:checked + span:after,
