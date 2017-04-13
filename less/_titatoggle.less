@@ -555,6 +555,7 @@ State Disabled
   }
 }
 
+.checkbox-slider--a-rounded input:disabled,
 .checkbox-slider--a input:disabled {
   + span:after { background: @gray-light; color: @white; }
   + span:before { box-shadow: 0 0 0 black; }
@@ -563,9 +564,11 @@ State Disabled
   }
 }
 
+.checkbox-slider--b-flat input:disabled,
 .checkbox-slider--b input:disabled {
   
   + span:after {
+    
     border: solid transparent 2px;
     border-radius: @scrubber-width-lg;
   }
@@ -573,8 +576,13 @@ State Disabled
   + span {
     color: @gray-light;
   }
+
+   &:checked + span:before {
+    background: @gray-light;
+  }
 }
 
+.checkbox-slider--c-weight input:disabled,
 .checkbox-slider--c input:disabled {
   &:checked + span:after {
     background: @gray-light;
@@ -587,6 +595,7 @@ State Disabled
   + span {
     color: @gray-light;
   }
+
 }
 
 /*******************************************************
