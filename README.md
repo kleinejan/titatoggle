@@ -1,17 +1,22 @@
-TiTatoggle - (bs3 addon without JS)
-==========
+TiTatoggle - (bootstrap 4 addon without JS)
+===========================================
 
 Using awesome toggle buttons without Javascript or any other logic, other than plane form elements.
 The Pattern is the same as Twitter-Bootstrap. So it can be implemented without a breeze.
 
-Browser support: Internet Explorer 9, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android 
+Browser support: Internet Explorer 9/10/11, Edge, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android
 
-Install:
-'''
+Install package:
+```
+$ npm install titatoggle --save-dev (Bootstrap 4.x.x)
+$ npm install titatoggle@1.0.0 --save-dev (Legacy bootstrap 3.x.x)
+$ yarn add titatoggle
 $ bower install titatoggle
-'''
+```
+
 
 GNU General Public License v2.0
+Example structure
 
 ```html
 <div class="checkbox checkbox-slider--X">
