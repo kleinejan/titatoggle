@@ -1,7 +1,7 @@
 {
   "name": "titatoggle",
-  "version": "2.0.0",
-  "description": "Default bootstrap checkbox toggle buttons. Just default Bootstrap, add a class to use these awesome toggle buttons. Browser support: Internet Explorer 9, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android",
+  "version": "2.0.1",
+  "description": "Default bootstrap 4 checkbox toggle buttons. Just default Bootstrap, add a class to use these awesome toggle buttons. Browser support: Internet Explorer 9/10,11, Edge, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -36,7 +36,6 @@
     "gulp-file-include": "^1.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-highlight": "^2.1.0",
-    "gulp-less": "^3.3.0",
     "gulp-path": "^3.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
