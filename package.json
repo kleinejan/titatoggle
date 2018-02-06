@@ -1,6 +1,6 @@
 {
   "name": "titatoggle",
-  "version": "1.2.15",
+  "version": "2.0.0",
   "description": "Default bootstrap checkbox toggle buttons. Just default Bootstrap, add a class to use these awesome toggle buttons. Browser support: Internet Explorer 9, FireFox, Safari, Chrome, Safari Ios, Stock Android browser 4.2, Chrome Android",
   "main": "Gruntfile.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "type": "git",
     "url": "https://github.com/kleinejan/titatoggle"
   },
+  "license": "GPL-2.0",
   "keywords": [
     "css",
     "less",
@@ -22,9 +23,8 @@
     "buttons",
     "toggle"
   ],
-  "license": "GPLv2",
   "devDependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "browser-sync": "^2.18.7",
     "del": "^2.2.2",
     "gh-pages": "^0.12.0",
@@ -39,6 +39,7 @@
     "gulp-less": "^3.3.0",
     "gulp-path": "^3.0.3",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "gulp-snippet-highlight": "^1.0.0",
     "gulp-watch": "^4.3.11",
     "highlight": "^0.2.4",

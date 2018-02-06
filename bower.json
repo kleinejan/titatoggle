@@ -1,6 +1,6 @@
 {
   "name": "titatoggle",
-  "version": "1.2.14",
+  "version": "2.0.0",
   "homepage": "https://github.com/kleinejan/titatoggle",
   "authors": [
     "Jan Enning <enning@kleinejan.org>"
@@ -40,6 +40,6 @@
   ],
   "license": "GNU GENERAL PUBLIC LICENSE V2.0",
   "dependencies": {
-    "bootstrap": "~3.3.0"
+    "bootstrap": "~4.0.0"
   }
 }
