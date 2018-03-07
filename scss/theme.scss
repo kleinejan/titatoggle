@@ -5,8 +5,7 @@ body {
 .hero{
 	padding:20px;
 	border-bottom:gray 1px solid;
-	background:lighten(@brand-primary,40%);
-	// color:white;
+  background: lighten($blue,40%);
 }
 
 .panel-footer > .highlight > pre {

@@ -69,10 +69,11 @@
 //@import "node_modules/bootstrap/less/utilities.less";
 //@import "node_modules/bootstrap/less/responsive-utilities.less";
 
-@import "node_modules/bootstrap/bootstrap;
+@import "node_modules/bootstrap/scss/bootstrap";
+//@import "node_modules/highlight.js/styles/github.css";
+@import "syntax";
+@import "theme";
 
-@import "theme.scss";
-// @import "theme-debug.scss";
-//@import "_syntax.less";
 @import "_titatoggle.scss";
-@import (less) "node_modules/highlight.js/styles/github.css";
+
+

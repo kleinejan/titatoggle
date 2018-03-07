@@ -1,46 +1,43 @@
 <h3 id="intro">Intro</h3>
 <p class="lead">
-    The only difference between default Bootstrap is the additional <code>span</code>. After that it's only a question of adding a class that fits your needs.
+    The only difference between default Bootstrap checkbox is the structure. Titatoggle uses implicit labels. That makes life easy.
+    So structure wise it's different from bootstrap.
 </p>
 
 <h4>Bootstrap 4</h4>
 <p>
     The <a href="http://getbootstrap.com/">Bootstrap 4</a> default way of generating checkbox looks a like this:
 </p>
-<div class="checkbox">
-    <label>
-        <input type="checkbox">default Bootstrap 4
-    </label>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
 </div>
 <pre><code class="html">
-<div class="checkbox">
-    <label>
-        <input type="checkbox">default Bootstrap 4
-    </label>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
 </div>
 </code></pre>
 
 <h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
-<p>
-    Just by adding one
-</p>
 
-<pre><code class="css">
-  <span&gt;
-  </span&gt;
-</code>
-</pre>
-<p>
-	plus the class
-</p>
 <pre><code class="css">
   .checkbox-slider--TYPE</code>
 </pre>
 <p>you get this result:</p>
 
+<div class="form-check checkbox-slider--default">
+  <label class="form-check-label">
+    <input class="" type="checkbox" value="">
+    <span>Default checkbox</span>
+  </label>
+</div>
 
-
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
 <label>
     <input type="checkbox"><span>TiTaToggle</span>
 </label>
@@ -48,7 +45,7 @@
 
 
 <pre><code class="html">
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
 	<label>
 		<input type="checkbox"><span>TiTaToggle</span>
 	</label>

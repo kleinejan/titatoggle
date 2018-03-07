@@ -13,11 +13,7 @@ $ npm install titatoggle@1.0.0 --save-dev (Legacy bootstrap 3.x.x)
 $ yarn add titatoggle
 $ bower install titatoggle
 ```
-
-
-GNU General Public License v2.0
-Example structure
-
+### Example usage
 ```html
 <div class="checkbox checkbox-slider--X">
 	<label>
@@ -25,3 +21,8 @@ Example structure
 	</label>
 </div>
 ```
+
+More examples can be found at the documentation site:[Titatoggle](http://kleinejan.github.io/titatoggle/)
+
+GNU General Public License v2.0
+Example structure

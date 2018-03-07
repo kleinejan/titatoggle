@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-sm-3">
           <h5>Default checkbox</h5>
-          <div class="checkbox checkbox-slider--default checkbox-slider-lg">
+          <div class="form-check checkbox-slider--default checkbox-slider-lg">
             <label>
               <input type="checkbox"><span>Check</span>
             </label>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-sm-3">
           <h5>With text</h5>
-          <div class="checkbox checkbox-slider--a checkbox-slider-lg">
+          <div class="form-check checkbox-slider--a checkbox-slider-lg">
             <label>
               <input type="checkbox"><span>This</span>
             </label>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-sm-3">
           <h5>iOS like</h5>
-          <div class="checkbox checkbox-slider--b checkbox-slider-lg">
+          <div class="form-check checkbox-slider--b checkbox-slider-lg">
             <label>
               <input type="checkbox"><span>Out</span>
             </label>
@@ -83,7 +83,7 @@
         </div>
         <div class="col-sm-3">
           <h5>Material like</h5>
-          <div class="checkbox checkbox-slider--c checkbox-slider-lg">
+          <div class="form-check checkbox-slider--c checkbox-slider-lg">
             <label>
               <input type="checkbox"><span>Dude</span>
             </label>
@@ -103,45 +103,44 @@
 	<div class="container">
 		<h3 id="intro">Intro</h3>
 <p class="lead">
-    The only difference between default Bootstrap is the additional <code class="hljs"><span class="hljs-attribute">span</span></code>. After that it's only a question of adding a class that fits your needs.
+    The only difference between default Bootstrap checkbox is the structure. Titatoggle uses implicit labels. That makes life easy.
+    So structure wise it's different from bootstrap.
 </p>
 
 <h4>Bootstrap 4</h4>
 <p>
     The <a href="http://getbootstrap.com/">Bootstrap 4</a> default way of generating checkbox looks a like this:
 </p>
-<div class="checkbox">
-    <label>
-        <input type="checkbox">default Bootstrap 4
-    </label>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
 </div>
 <pre><code class="html hljs">
-&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox"</span>&gt;
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>default Bootstrap 4
-    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-check"</span>&gt;
+  &lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-check-input"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"checkbox"</span> value=<span class="hljs-string">""</span> id=<span class="hljs-string">"defaultCheck1"</span>&gt;
+  &lt;label <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-check-label"</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">"defaultCheck1"</span>&gt;
+    <span class="hljs-type">Default</span> checkbox
+  &lt;/label&gt;
+&lt;/div&gt;
 </code></pre>
 
 <h4>Ti-Ta-Toggle <small>awesomenes</small></h4>
-<p>
-    Just by adding one
-</p>
 
-<pre><code class="css hljs">
-  &lt;span&amp;<span class="hljs-keyword">gt</span>; &lt;=<span class="hljs-string">""</span> span&amp;<span class="hljs-keyword">gt</span>;=<span class="hljs-string">""</span> code=<span class="hljs-string">""</span>&gt;
-&lt;/span&amp;<span class="hljs-keyword">gt</span>;&gt;</code></pre>
-<p>
-	plus the class
-</p>
 <pre><code class="css hljs">
   .checkbox-slider<span class="hljs-comment">--TYPE</span></code>
 </pre>
 <p>you get this result:</p>
 
+<div class="form-check checkbox-slider--default">
+  <label class="form-check-label">
+    <input class="" type="checkbox" value="">
+    <span>Default checkbox</span>
+  </label>
+</div>
 
-
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
 <label>
     <input type="checkbox"><span>TiTaToggle</span>
 </label>
@@ -149,7 +148,7 @@
 
 
 <pre><code class="html hljs">
-&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"checkbox checkbox-slider--default"</span>&gt;
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-check checkbox-slider--default"</span>&gt;
 	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
 		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>TiTaToggle<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 	<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -175,22 +174,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--default">
+		<div class="form-check checkbox-slider--default">
 			<label>
 				<input type="checkbox"><span>default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--default">
+		<div class="form-check checkbox-slider--default">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--default">
+		<div class="form-check checkbox-slider--default">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
 	<label>
 		<input type="checkbox" checked disabled><span>disabled checked</span>
 	</label>
@@ -198,12 +197,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+		<div class="form-check checkbox-slider--default checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+		<div class="form-check checkbox-slider--default checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -211,12 +210,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+		<div class="form-check checkbox-slider--default checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+		<div class="form-check checkbox-slider--default checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -224,12 +223,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+		<div class="form-check checkbox-slider--default checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+		<div class="form-check checkbox-slider--default checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -254,22 +253,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--a-rounded">
+		<div class="form-check checkbox-slider--a-rounded">
 			<label>
 				<input type="checkbox"><span>Default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded">
+		<div class="form-check checkbox-slider--a-rounded">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded">
+		<div class="form-check checkbox-slider--a-rounded">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded">
+		<div class="form-check checkbox-slider--a-rounded">
 			<label>
 				<input type="checkbox" disabled checked><span>disabled checked</span>
 			</label>
@@ -277,12 +276,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-sm">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-sm">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -290,12 +289,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-md">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-md">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -303,12 +302,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-lg">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a-rounded checkbox-slider-lg">
+		<div class="form-check checkbox-slider--a-rounded checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -335,22 +334,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--a">
+		<div class="form-check checkbox-slider--a">
 			<label>
 				<input type="checkbox"><span>Slider a</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a">
+		<div class="form-check checkbox-slider--a">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a">
+		<div class="form-check checkbox-slider--a">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a">
+		<div class="form-check checkbox-slider--a">
 			<label>
 				<input type="checkbox" checked disabled><span>disabled checked </span>
 			</label>
@@ -359,12 +358,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--a checkbox-slider-sm">
+		<div class="form-check checkbox-slider--a checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a checkbox-slider-sm">
+		<div class="form-check checkbox-slider--a checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -372,12 +371,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--a checkbox-slider-md">
+		<div class="form-check checkbox-slider--a checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a checkbox-slider-md">
+		<div class="form-check checkbox-slider--a checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -385,12 +384,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--a checkbox-slider-lg">
+		<div class="form-check checkbox-slider--a checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--a checkbox-slider-lg">
+		<div class="form-check checkbox-slider--a checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -411,22 +410,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--b">
+		<div class="form-check checkbox-slider--b">
 			<label>
 				<input type="checkbox"><span>Default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b">
+		<div class="form-check checkbox-slider--b">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b">
+		<div class="form-check checkbox-slider--b">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b">
+		<div class="form-check checkbox-slider--b">
 			<label>
 				<input type="checkbox" disabled checked><span>disabled checked</span>
 			</label>
@@ -434,12 +433,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--b checkbox-slider-sm">
+		<div class="form-check checkbox-slider--b checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b checkbox-slider-sm">
+		<div class="form-check checkbox-slider--b checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -447,12 +446,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--b checkbox-slider-md">
+		<div class="form-check checkbox-slider--b checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b checkbox-slider-md">
+		<div class="form-check checkbox-slider--b checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -460,12 +459,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--b checkbox-slider-lg">
+		<div class="form-check checkbox-slider--b checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b checkbox-slider-lg">
+		<div class="form-check checkbox-slider--b checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -490,22 +489,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--b-flat">
+		<div class="form-check checkbox-slider--b-flat">
 			<label>
 				<input type="checkbox"><span>Default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat">
+		<div class="form-check checkbox-slider--b-flat">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat">
+		<div class="form-check checkbox-slider--b-flat">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat">
+		<div class="form-check checkbox-slider--b-flat">
 			<label>
 				<input type="checkbox" disabled checked><span>disabled checked</span>
 			</label>
@@ -513,12 +512,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-sm">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-sm">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -526,12 +525,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-md">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-md">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -539,12 +538,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-lg">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--b-flat checkbox-slider-lg">
+		<div class="form-check checkbox-slider--b-flat checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -569,22 +568,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--c">
+		<div class="form-check checkbox-slider--c">
 			<label>
 				<input type="checkbox"><span>Default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c">
+		<div class="form-check checkbox-slider--c">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c">
+		<div class="form-check checkbox-slider--c">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c">
+		<div class="form-check checkbox-slider--c">
 			<label>
 				<input type="checkbox" checked disabled><span>disabled checked</span>
 			</label>
@@ -592,12 +591,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--c checkbox-slider-sm">
+		<div class="form-check checkbox-slider--c checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c checkbox-slider-sm">
+		<div class="form-check checkbox-slider--c checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -605,12 +604,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--c checkbox-slider-md">
+		<div class="form-check checkbox-slider--c checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c checkbox-slider-md">
+		<div class="form-check checkbox-slider--c checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -618,12 +617,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--c checkbox-slider-lg">
+		<div class="form-check checkbox-slider--c checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c checkbox-slider-lg">
+		<div class="form-check checkbox-slider--c checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -647,22 +646,22 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--c-weight">
+		<div class="form-check checkbox-slider--c-weight">
 			<label>
 				<input type="checkbox"><span>Default</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight">
+		<div class="form-check checkbox-slider--c-weight">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight">
+		<div class="form-check checkbox-slider--c-weight">
 			<label>
 				<input type="checkbox" disabled><span>disabled</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight">
+		<div class="form-check checkbox-slider--c-weight">
 			<label>
 				<input type="checkbox" checked disabled><span>disabled checked</span>
 			</label>
@@ -670,12 +669,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-sm">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>small</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-sm">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-sm">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -683,12 +682,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-md">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>medium</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-md">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-md">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -696,12 +695,12 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-lg">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>large</span>
 			</label>
 		</div>
-		<div class="checkbox checkbox-slider--c-weight checkbox-slider-lg">
+		<div class="form-check checkbox-slider--c-weight checkbox-slider-lg">
 			<label>
 				<input type="checkbox" checked><span>checked</span>
 			</label>
@@ -737,7 +736,7 @@
 <div class="row">
 	<div class="col-sm-3">
 		<h5>Default</h5>
-		<div class="checkbox checkbox-slider--default">
+		<div class="form-check checkbox-slider--default">
 			<label>
 				<input type="checkbox"><span>Check me</span>
 			</label>
@@ -745,7 +744,7 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Small</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-sm">
+		<div class="form-check checkbox-slider--default checkbox-slider-sm">
 			<label>
 				<input type="checkbox"><span>Check me</span>
 			</label>
@@ -753,7 +752,7 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Medium</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-md">
+		<div class="form-check checkbox-slider--default checkbox-slider-md">
 			<label>
 				<input type="checkbox"><span>Check me</span>
 			</label>
@@ -761,7 +760,7 @@
 	</div>
 	<div class="col-sm-3">
 		<h5>Large</h5>
-		<div class="checkbox checkbox-slider--default checkbox-slider-lg">
+		<div class="form-check checkbox-slider--default checkbox-slider-lg">
 			<label>
 				<input type="checkbox"><span>Check me</span>
 			</label>
@@ -791,28 +790,28 @@
 
 		<h3 id="indicator">Indicator</h3>
 <p class="lead">
-  Small visual que for the label to show that the checkbox is checked.
+  Small visual que for the label to show that the form-check is checked.
 </p>
 <div class="alert alert-warning">
   Not so usable for the visually impaired, due
   to the fact it's only a color and contrast is to low.
 </div>
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
   <label>
     <input type="checkbox" checked><span class="indicator-success">success</span>
   </label>
 </div>
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
   <label>
     <input type="checkbox" checked><span class="indicator-info">info</span>
   </label>
 </div>
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
   <label>
     <input type="checkbox" checked><span class="indicator-warning">warning</span>
   </label>
 </div>
-<div class="checkbox checkbox-slider--default">
+<div class="form-check checkbox-slider--default">
   <label>
     <input type="checkbox" checked><span class="indicator-danger">danger</span>
   </label>
@@ -820,25 +819,25 @@
 
 <pre><code class="html hljs">
 
-<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+<span class="applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"form-check ..."</span>&gt;
 ...
   &lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-success"</span>&gt;danger&lt;/span&gt;
 ...
 &lt;/<span class="hljs-keyword">div</span>&gt;
 
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"form-check ..."</span>&gt;
 ...
   &lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-info"</span>&gt;danger&lt;/span&gt;
 ...
 &lt;/<span class="hljs-keyword">div</span>&gt;
 
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"form-check ..."</span>&gt;
 ...
   &lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-warning"</span>&gt;danger&lt;/span&gt;
 ...
 &lt;/<span class="hljs-keyword">div</span>&gt;
 
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"checkbox ..."</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"form-check ..."</span>&gt;
 ...
   &lt;span <span class="hljs-built_in">class</span>=<span class="hljs-string">"indicator-danger"</span>&gt;danger&lt;/span&gt;
 ...
@@ -858,34 +857,35 @@
 	Not so usable for the visually impaired, due
 	to the fact it's only a color and contrast is to low. And keep in mind that colorblindness is a real fact.
 </div>
-<div class="col-md-3">
+<div class="row">
+<div class="col-sm">
 	<h5>Default</h5>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--default">
+	<div class="form-check checkbox-slider-lg checkbox-slider--default">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--a">
+	<div class="form-check checkbox-slider-lg checkbox-slider--a">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b-flat">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c-weight">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
@@ -893,115 +893,109 @@
 
 </div>
 
-<div class="col-md-3">
+<div class="col-sm">
 	<h5>Info</h5>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--default checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--a  checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b  checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b  checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat  checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b-flat  checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c  checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-info">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-info">
 		<label>
 			<input type="checkbox" checked><span>info</span>
 		</label>
 	</div>
 
 </div>
-<div class="col-md-3">
+<div class="col-sm">
 	<h5>Danger</h5>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--default checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--a  checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c  checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-danger">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-danger">
 		<label>
 			<input type="checkbox" checked><span>danger</span>
 		</label>
 	</div>
 
 </div>
-<div class="col-md-3">
+<div class="col-sm">
 	<h5>Warning</h5>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--default checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--default checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--a  checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--a  checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--b-flat checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c  checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c  checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
-	<div class="checkbox checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-warning">
+	<div class="form-check checkbox-slider-lg checkbox-slider--c-weight  checkbox-slider-warning">
 		<label>
 			<input type="checkbox" checked><span>warning</span>
 		</label>
 	</div>
 
 </div>
-
-{%highlight html%}
-<div class="checkbox ... checkbox-slider-info">
-<div class="checkbox ... checkbox-slider-danger">
-<div class="checkbox ... checkbox-slider-warning">
-
-{%endhighlight%}
+</div>
 
 		<h3 id="howto">Howto</h3>
 <p class="lead">
@@ -1049,6 +1043,6 @@
     <footer>
         <a href="http://kleinejan.github.io/titatoggle/">TiTaToggle</a>
     </footer>
-</div></div></div></body>
+</body>
 </html>
 
