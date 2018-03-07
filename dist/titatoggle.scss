@@ -549,6 +549,7 @@ Slider C-weight
 
     + span:before {
       height: 1px !important; // needs to be
+      top: 20px;
     }
 
     &:checked + span:before {

@@ -354,6 +354,15 @@ Slider C-weight
   transform: scale(0.7);
   left: -6px; }
 
+.checkbox-slider--c-weight.checkbox-slider-sm input + span:before {
+  top: 5px; }
+
+.checkbox-slider--c-weight.checkbox-slider-md input + span:before {
+  top: 15px; }
+
+.checkbox-slider--c-weight.checkbox-slider-lg input + span:before {
+  top: 20px; }
+
 /******************************************************
 State Disabled
 *******************************************************/
