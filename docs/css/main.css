@@ -7224,17 +7224,17 @@ Slider C-weight
 State Disabled
 *******************************************************/
 .checkbox-slider--default input:disabled + span:after {
-  background: #f8f9fa; }
+  background: #adb5bd; }
 
 .checkbox-slider--default input:disabled + span:before {
   box-shadow: 0 0 0 black; }
 
 .checkbox-slider--default input:disabled + span {
-  color: #f8f9fa; }
+  color: #adb5bd; }
 
 .checkbox-slider--a-rounded input:disabled + span:after,
 .checkbox-slider--a input:disabled + span:after {
-  background: #f8f9fa;
+  background: #adb5bd;
   color: #FFF; }
 
 .checkbox-slider--a-rounded input:disabled + span:before,
@@ -7243,7 +7243,7 @@ State Disabled
 
 .checkbox-slider--a-rounded input:disabled + span,
 .checkbox-slider--a input:disabled + span {
-  color: #f8f9fa; }
+  color: #adb5bd; }
 
 .checkbox-slider--b-flat input:disabled + span:after,
 .checkbox-slider--b input:disabled + span:after {
@@ -7256,27 +7256,27 @@ State Disabled
 
 .checkbox-slider--b-flat input:disabled + span,
 .checkbox-slider--b input:disabled + span {
-  color: #f8f9fa; }
+  color: #adb5bd; }
 
 .checkbox-slider--b-flat input:disabled:checked + span:before,
 .checkbox-slider--b input:disabled:checked + span:before {
-  background: #f8f9fa; }
+  background: #adb5bd; }
 
 .checkbox-slider--c-weight input:disabled:checked + span:after,
 .checkbox-slider--c input:disabled:checked + span:after {
-  background: #f8f9fa; }
+  background: #adb5bd; }
 
 .checkbox-slider--c-weight input:disabled + span:after,
 .checkbox-slider--c input:disabled + span:after {
-  border-color: #f8f9fa; }
+  border-color: #adb5bd; }
 
 .checkbox-slider--c-weight input:disabled + span:before,
 .checkbox-slider--c input:disabled + span:before {
-  background: #f8f9fa; }
+  background: #adb5bd; }
 
 .checkbox-slider--c-weight input:disabled + span,
 .checkbox-slider--c input:disabled + span {
-  color: #f8f9fa; }
+  color: #adb5bd; }
 
 /*******************************************************
 Indicators
