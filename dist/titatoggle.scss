@@ -549,7 +549,6 @@ Slider C-weight
 
     + span:before {
       height: 1px !important; // needs to be
-      top: 20px;
     }
 
     &:checked + span:before {
@@ -561,6 +560,22 @@ Slider C-weight
     }
   }
 
+  &.checkbox-slider-sm {
+    input + span:before {
+      top:$scrubber-width-sm /2;
+    }
+  }
+  &.checkbox-slider-md {
+    input + span:before {
+      top:$scrubber-width-md /2;
+    }
+  }
+  &.checkbox-slider-lg {
+    input + span:before {
+      top:$scrubber-width-lg /2;
+    }
+  }
+
 }
 
 /******************************************************
@@ -568,19 +583,19 @@ State Disabled
 *******************************************************/
 
 .checkbox-slider--default input:disabled {
-  + span:after { background: $gray-100; }
+  + span:after { background: $gray-500; }
   + span:before { box-shadow: 0 0 0 black; }
   + span {
-    color: $gray-100;
+    color: $gray-500;
   }
 }
 
 .checkbox-slider--a-rounded input:disabled,
 .checkbox-slider--a input:disabled {
-  + span:after { background: $gray-100; color: $white; }
+  + span:after { background: $gray-500; color: $white; }
   + span:before { box-shadow: 0 0 0 black; }
   + span {
-    color: $gray-100;
+    color: $gray-500;
   }
 }
 
@@ -594,26 +609,26 @@ State Disabled
   }
   + span:before { box-shadow: 0 0 0 black; }
   + span {
-    color: $gray-100;
+    color: $gray-500;
   }
 
    &:checked + span:before {
-    background: $gray-100;
+    background: $gray-500;
   }
 }
 
 .checkbox-slider--c-weight input:disabled,
 .checkbox-slider--c input:disabled {
   &:checked + span:after {
-    background: $gray-100;
+    background: $gray-500;
   }
 
   + span:after {
-    border-color: $gray-100;
+    border-color: $gray-500;
   }
-  + span:before { background: $gray-100; }
+  + span:before { background: $gray-500; }
   + span {
-    color: $gray-100;
+    color: $gray-500;
   }
 
 }
