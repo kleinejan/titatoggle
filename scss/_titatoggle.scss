@@ -560,6 +560,22 @@ Slider C-weight
     }
   }
 
+  &.checkbox-slider-sm {
+    input + span:before {
+      top:$scrubber-width-sm /2;
+    }
+  }
+  &.checkbox-slider-md {
+    input + span:before {
+      top:$scrubber-width-md /2;
+    }
+  }
+  &.checkbox-slider-lg {
+    input + span:before {
+      top:$scrubber-width-lg /2;
+    }
+  }
+
 }
 
 /******************************************************
