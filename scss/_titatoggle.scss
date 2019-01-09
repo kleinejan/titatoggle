@@ -3,18 +3,18 @@ Variables
 *******************************************************/
 $white: #FFF;
 // Sizes
-$scrubber-width-default: 20px;
-$scrubber-width-sm: 10px;
-$scrubber-width-md: 30px;
-$scrubber-width-lg: 40px;
+$scrubber-width-default: 20px!default;
+$scrubber-width-sm: 10px!default;
+$scrubber-width-md: 30px!default;
+$scrubber-width-lg: 40px!default;
 
 // Scrubber text
 // - off
-$slider-text-unchecked: "Off";
-$slider-text-unchecked-color: #000;
+$slider-text-unchecked: "Off"!default;
+$slider-text-unchecked-color: #000!default;
 // - on
-$slider-text-checked: "On";
-$slider-text-checked-color: #fff;
+$slider-text-checked: "On"!default;
+$slider-text-checked-color: #fff!default;
 
 /*******************************************************
 Animation
