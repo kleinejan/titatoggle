@@ -24,5 +24,4 @@ $ bower install titatoggle
 
 More examples can be found at the documentation site:[Titatoggle](http://kleinejan.github.io/titatoggle/)
 
-GNU General Public License v2.0
-Example structure
+MIT License
